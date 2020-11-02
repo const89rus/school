@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "src/*": ["*"]
+    },
+    "sourceMap": true,
+    "inlineSources": true,
+    "sourceRoot": "/"
+  }
+}
