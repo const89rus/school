@@ -42,6 +42,5 @@ export const Text = styled.span`
 
 export const Wrapper = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
-  height: 20rem;
   position: relative;
 `;

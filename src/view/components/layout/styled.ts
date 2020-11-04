@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 import { Button as ButtonUi } from 'view/common';

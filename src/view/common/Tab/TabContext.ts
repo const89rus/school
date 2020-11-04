@@ -5,7 +5,7 @@ interface Context {
   onChangeTab: (value: string) => void;
 }
 
-export const TabContext = React.createContext<any>({
+export const TabContext = React.createContext<Context>({
   activeTab: '',
-  onChangeTab: null,
+  onChangeTab: () => undefined,
 });
