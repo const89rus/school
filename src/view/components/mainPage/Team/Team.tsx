@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const Team: React.FC = () => {
-  return <div>Команда</div>;
+  return <div id="team">Команда</div>;
 };

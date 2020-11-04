@@ -1,13 +1,17 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 import { Button as ButtonUi } from 'view/common';
 
+import { ReactComponent as LogoSvg } from 'assets/svg/logo.svg';
+
 export const Layout = styled.div`
-  background-color: #1794a5;
+  background-color: ${(props) => props.theme.colors.primary};
   height: 10.313rem;
   display: flex;
-  padding-left: 23.5rem;
-  padding-right: 23.438rem;
+  padding: ${(props) => props.theme.root.contentPadding};
+  justify-content: space-between;
 `;
 
 export const Button = styled(ButtonUi)`
@@ -16,21 +20,51 @@ export const Button = styled(ButtonUi)`
   width: 23.125rem;
   font-size: 2rem;
   border: none;
-  margin-left: 20.75rem;
-  margin-top: 2.625rem;
 `;
 
 export const SocialContainer = styled.div`
   margin-left: 1.875rem;
-  background-color: #075f6b;
+  background-color: ${(props) => props.theme.colors.darkPrimary};
   height: 4.063rem;
   width: 4.375rem;
-  margin-top: 2.625rem;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-export const LogoContainer = styled.div`
+export const Wrapper = styled.div`
+  display: flex;
+  margin-top: 2.625rem;
+`;
+
+export const LogoWrapper = styled.div`
   margin-top: 1.625rem;
+`;
+
+export const Logo = styled(LogoSvg)`
+  width: 16.688rem;
+  height: 6.688rem;
+`;
+
+export const MenuContainer = styled.div`
+  height: 5rem;
+  padding: ${(props) => props.theme.root.contentPadding};
+  background-color: ${(props) => props.theme.colors.darkPrimary};
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const MenuItem = styled(HashLink)`
+  color: ${(props) => props.theme.colors.white};
+  font-size: 1.5rem;
+  text-decoration: none;
+`;
+
+export const MenuItemWrapper = styled.div`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  &:hover {
+    background-color: ${(props) => props.theme.colors.yellow};
+  }
 `;

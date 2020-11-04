@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: 'Comfortaa', cursive;
   font-weight: 400;
@@ -7,3 +11,20 @@ body {
   padding: 0;
 }
 
+@media screen and (min-width: 1601px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
+}

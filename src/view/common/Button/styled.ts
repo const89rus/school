@@ -5,5 +5,10 @@ interface Style {
 }
 
 export const Button = styled.button<Style>`
-  background: ${({ appearance }) => (appearance === 'primary' ? '#F6AE2D' : 'black')};
+  background-color: ${({ appearance }) => (appearance === 'primary' ? '#F6AE2D' : 'black')};
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #d89f38;
+  }
 `;
