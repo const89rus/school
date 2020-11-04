@@ -27,5 +27,6 @@
   "paths": {
     "view/*": ["src/view/*"],
     "domain/*": ["src/domain/*"],
+    "assets/*": ["src/asstes/*"],
   },
 }
