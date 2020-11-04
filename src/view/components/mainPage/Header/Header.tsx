@@ -1,10 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+
+import * as S from './styled';
 
 export const Header: React.FC = () => {
   return (
-    <div style={{ marginTop: '100rem', backgroundColor: 'red' }}>
+    <S.Wrapper>
       <div id="#about">Это только начало!</div>
-    </div>
+    </S.Wrapper>
   );
 };

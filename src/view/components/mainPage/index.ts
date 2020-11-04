@@ -1,2 +1,2 @@
 export { Header } from './Header/Header';
-export { Team } from './Team/Team';
+export { Tabs } from './Tabs/Tabs';
