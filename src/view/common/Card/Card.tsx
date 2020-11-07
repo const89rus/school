@@ -15,10 +15,13 @@ interface Props {
 export const Card: React.FC<Props> = ({ name, img, alt = 'avatar', position, variant = 'primaryDark' }) => {
   return (
     <S.CardWrapper variant={variant}>
-      <img src={img} alt={alt} />
-
-      <span>{name}</span>
-      <span>{position}</span>
+      <S.CardAvatar variant={variant}>
+        <S.Img src={img} alt={alt} />
+      </S.CardAvatar>
+      <S.CardContent variant={variant}>
+        <S.Name>{name}</S.Name>
+        <span>{position}</span>
+      </S.CardContent>
     </S.CardWrapper>
   );
 };

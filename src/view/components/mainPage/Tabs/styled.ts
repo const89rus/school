@@ -14,7 +14,7 @@ export const AbsolutePosition = styled.div`
 
 export const TabHeadersWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: ${(props) => props.theme.root.contentPadding};
 `;
 

@@ -33,18 +33,15 @@ const cards = [
 export const Team: React.FC = () => {
   return (
     <S.Wrapper id="team">
-      Команда
-      <div>
-        {cards.map((item, i) => (
-          <Card
-            key={item.id}
-            position={item.position}
-            name={item.name}
-            img={item.img}
-            variant={i % 2 == 0 ? 'yellow' : 'primaryDark'}
-          />
-        ))}
-      </div>
+      {cards.map((item, i) => (
+        <Card
+          key={item.id}
+          position={item.position}
+          name={item.name}
+          img={item.img}
+          variant={i % 2 == 0 ? 'yellow' : 'primaryDark'}
+        />
+      ))}
     </S.Wrapper>
   );
 };
