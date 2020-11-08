@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+//import colors from 'assets/variables/colors';
 
 interface Style {
   variant?: 'primaryDark' | 'yellow';
@@ -18,7 +19,7 @@ export const SectionWrapper = styled.div<Style>`
 export const SectionHeader = styled.div<Style>`
   width: 10rem;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 1rem 5rem;
   border-radius: 1rem 1rem 0px 0px;
   text-align: center;

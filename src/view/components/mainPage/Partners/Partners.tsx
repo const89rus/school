@@ -8,11 +8,11 @@ import partner2 from 'assets/img/arktik_media.png';
 
 export const Partners: React.FC = () => {
   return (
-    <S.Wrapper>
-      <Section header="Партнеры" variant="primaryDark" headerVariant="yellow" contentVariant="yellow">
-        <img src={partner1} alt="logo" />
-        <img src={partner2} alt="logo" />
-      </Section>
-    </S.Wrapper>
+    <Section header="Партнеры" variant="primaryDark" headerVariant="yellow" contentVariant="yellow">
+      <S.Wrapper>
+        <S.Img src={partner1} alt="logo" />
+        <S.Img src={partner2} alt="logo" />
+      </S.Wrapper>
+    </Section>
   );
 };
