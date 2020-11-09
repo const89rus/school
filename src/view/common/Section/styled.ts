@@ -2,7 +2,7 @@ import styled from 'styled-components';
 //import colors from 'assets/variables/colors';
 
 interface Style {
-  variant?: 'primaryDark' | 'yellow';
+  variant?: string;
   headerVariant?: 'primaryDark' | 'yellow';
   contentVariant?: 'primaryDark' | 'yellow';
 }
@@ -12,8 +12,7 @@ export const SectionWrapper = styled.div<Style>`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: ${({ variant, theme }) =>
-    variant === 'primaryDark' ? theme.colors.darkPrimary : theme.colors.yellow};
+  background-color: ${({ variant }) => variant};
 `;
 
 export const SectionHeader = styled.div<Style>`

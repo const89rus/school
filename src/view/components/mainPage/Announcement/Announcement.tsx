@@ -3,6 +3,8 @@ import React from 'react';
 import { Event } from 'view/common';
 import { Section } from 'view/common';
 
+import { colors } from 'assets/variables/colors';
+
 import * as S from './styled';
 
 const events = [
@@ -24,7 +26,7 @@ const events = [
 
 export const Announcement: React.FC = () => {
   return (
-    <Section header="Анонс" variant="yellow" headerVariant="primaryDark" contentVariant="primaryDark">
+    <Section header="Анонс" variant={colors.primary} headerVariant="primaryDark" contentVariant="primaryDark">
       <S.Wrapper>
         {events.map((item) => (
           <Event

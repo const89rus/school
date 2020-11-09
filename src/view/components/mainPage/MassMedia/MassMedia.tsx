@@ -4,11 +4,13 @@ import { Section } from 'view/common';
 import { Video } from 'view/common';
 import { Post } from 'view/common';
 
+import { colors } from 'assets/variables/colors';
+
 import * as S from './styled';
 
 export const MassMedia: React.FC = () => {
   return (
-    <Section header="СМИ о нас" variant="yellow" headerVariant="primaryDark" contentVariant="primaryDark">
+    <Section header="СМИ о нас" variant={colors.yellow} headerVariant="primaryDark" contentVariant="primaryDark">
       <S.Wrapper>
         <S.Line>
           <Video

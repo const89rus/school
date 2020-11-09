@@ -4,7 +4,7 @@ import * as S from './styled';
 
 interface Props {
   header: string;
-  variant?: 'primaryDark' | 'yellow';
+  variant?: string;
   headerVariant?: 'primaryDark' | 'yellow';
   contentVariant?: 'primaryDark' | 'yellow';
 }
