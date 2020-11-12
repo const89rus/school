@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 interface Style {
   variant?: string;
-  headerVariant?: 'primaryDark' | 'yellow';
-  contentVariant?: 'primaryDark' | 'yellow';
+  headerVariant?: string;
+  contentVariant?: string;
 }
 
 export const SectionWrapper = styled.div<Style>`
@@ -16,21 +16,19 @@ export const SectionWrapper = styled.div<Style>`
 `;
 
 export const SectionHeader = styled.div<Style>`
-  width: 10rem;
+  width: 20rem;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 1rem 5rem;
   border-radius: 1rem 1rem 0px 0px;
   text-align: center;
   color: ${(props) => props.theme.colors.white};
-  background-color: ${({ headerVariant, theme }) =>
-    headerVariant === 'primaryDark' ? theme.colors.darkPrimary : theme.colors.yellow};
+  background-color: ${({ headerVariant }) => headerVariant};
 `;
 
 export const SectionContent = styled.div<Style>`
   width: 100%;
   padding: 3rem 0;
   font-weight: 400;
-  background-color: ${({ contentVariant, theme }) =>
-    contentVariant === 'primaryDark' ? theme.colors.darkPrimary : theme.colors.yellow};
+  background-color: ${({ contentVariant }) => contentVariant};
 `;

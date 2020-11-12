@@ -4,7 +4,7 @@ import { Button as ButtonUi } from 'view/common';
 
 export const Wrapper = styled.div`
   color: ${(props) => props.theme.colors.white};
-  padding: 2rem 23.5rem;
+  padding: 1rem 23.5rem 2rem;
   display: flex;
   height: 8rem;
   justify-content: space-between;
@@ -20,7 +20,7 @@ export const ContactWrapper = styled.div`
 export const Question = styled.div`
   color: ${(props) => props.theme.colors.white};
   background-color: ${(props) => props.theme.colors.yellow};
-  padding: 1rem;
+  padding: 0.5rem 0.2rem;
   margin: 0.5rem 0;
 `;
 

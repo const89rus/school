@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
           журналист.
         </S.AbaoutParagraph>
         <S.ListHeader>Что ждёт участников курса?</S.ListHeader>
-        <ul>
+        <S.List>
           <S.ListItem>
             <S.ListItemSpan>Более 30 онлайн-занятий;</S.ListItemSpan>
           </S.ListItem>
@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
           <S.ListItem>
             <S.ListItemSpan>знакомство с новыми людьми.</S.ListItemSpan>
           </S.ListItem>
-        </ul>
+        </S.List>
       </S.HeaderContent>
     </S.Wrapper>
   );

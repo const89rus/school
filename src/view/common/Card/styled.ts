@@ -29,6 +29,7 @@ export const CardAvatar = styled.div<Style>`
 export const Img = styled.img<Style>`
   width: 100%;
   border-radius: 50%;
+  clip-path: circle();
 `;
 
 export const CardContent = styled.div<Style>`

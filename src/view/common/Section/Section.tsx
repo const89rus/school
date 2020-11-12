@@ -5,8 +5,8 @@ import * as S from './styled';
 interface Props {
   header: string;
   variant?: string;
-  headerVariant?: 'primaryDark' | 'yellow';
-  contentVariant?: 'primaryDark' | 'yellow';
+  headerVariant?: string;
+  contentVariant?: string;
 }
 
 export const Section: React.FC<Props> = ({ variant, headerVariant, contentVariant, header, children }) => {
