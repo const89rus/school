@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
+import { AuthContextProvider } from 'data/auth/AuthContextProvider';
+
 import { Routes } from 'view/Routes';
 import { Layout } from 'view/components/layout/Layout';
 
@@ -11,9 +13,11 @@ export const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Layout>
-          <Routes />
-        </Layout>
+        <AuthContextProvider>
+          <Layout>
+            <Routes />
+          </Layout>
+        </AuthContextProvider>
       </BrowserRouter>
     </ThemeProvider>
   );

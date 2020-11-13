@@ -1,12 +1,22 @@
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Fragment, useMemo } from 'react';
+import { Link, useRouteMatch } from 'react-router-dom';
 
 import { ReactComponent as Vk } from 'assets/svg/vk.svg';
 import { ReactComponent as Insta } from 'assets/svg/insta.svg';
 
 import * as S from './styled';
+import { colors } from 'assets/variables/colors';
 
 export const Layout: React.FC = ({ children }) => {
+  const isLoginPage = useRouteMatch('/login');
+  const isRegisterPage = useRouteMatch('/register');
+
+  const colorMenu = useMemo(() => {
+    if (!!isRegisterPage || !!isLoginPage) return colors.yellow;
+
+    return colors.darkPrimary;
+  }, [isLoginPage, isRegisterPage]);
+
   return (
     <Fragment>
       <S.Layout>
@@ -17,7 +27,9 @@ export const Layout: React.FC = ({ children }) => {
         </S.LogoWrapper>
 
         <S.Wrapper>
-          <S.Button>Личный кабинет</S.Button>
+          <Link to="/login">
+            <S.Button>Личный кабинет</S.Button>
+          </Link>
 
           <S.SocialContainer>
             <Vk />
@@ -28,7 +40,7 @@ export const Layout: React.FC = ({ children }) => {
         </S.Wrapper>
       </S.Layout>
 
-      <S.MenuContainer>
+      <S.MenuContainer bgColor={colorMenu}>
         <S.MenuItemWrapper>
           <S.MenuItem to="/#about">о проекте</S.MenuItem>
         </S.MenuItemWrapper>
