@@ -28,7 +28,3 @@ body {
     font-size: 8px;
   }
 }
-
-#teachers {
-  flex-wrap: wrap;
-}
