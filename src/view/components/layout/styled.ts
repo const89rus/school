@@ -5,6 +5,10 @@ import { Button as ButtonUi } from 'view/common';
 
 import { ReactComponent as LogoSvg } from 'assets/svg/logo.svg';
 
+interface IStyled {
+  bgColor?: string;
+}
+
 export const Layout = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
   height: 10.313rem;
@@ -45,10 +49,10 @@ export const Logo = styled(LogoSvg)`
   height: 6.688rem;
 `;
 
-export const MenuContainer = styled.div`
+export const MenuContainer = styled.div<IStyled>`
   height: 5rem;
   padding: ${(props) => props.theme.root.contentPadding};
-  background-color: ${(props) => props.theme.colors.darkPrimary};
+  background-color: ${(props) => props.bgColor};
   display: flex;
   justify-content: space-between;
 `;
