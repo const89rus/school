@@ -6,7 +6,7 @@ import { Button as ButtonUi } from 'view/common/Button/styled';
 export const Wrapper = styled.div`
   min-height: 80vh;
   background-color: ${colors.primary};
-  padding-top: 4.875rem;
+  padding: 4.875rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,8 +31,8 @@ export const Button = styled(ButtonUi)`
 export const Input = styled.input`
   height: 6.144rem;
   border: none;
-  color: ${colors.primary};
   font-family: Comfortaa;
+  outline: none;
   font-size: 1.5rem;
   line-height: 1.938rem;
   padding-left: 30px;
@@ -44,4 +44,12 @@ export const Input = styled.input`
   &:first-child {
     border-top: none;
   }
+`;
+
+export const ErorsWrapper = styled.div`
+  background-color: #f36c6c;
+  padding: 1rem;
+  width: 45.625rem;
+  box-sizing: border-box;
+  margin-bottom: 0.625rem;
 `;

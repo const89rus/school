@@ -1,15 +1,16 @@
 import React from 'react';
-
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
+import { ILoginComponent } from 'domain/auth/interfaces/ILoginComponent';
+
 import * as S from './styled';
 
-export const Login: React.FC<any> = () => {
-  const { register, formState } = useForm({
-    mode: 'onSubmit',
+export const Login: React.FC<ILoginComponent> = ({ onLogin }) => {
+  const { register, formState, handleSubmit } = useForm({
+    mode: 'onChange',
     defaultValues: {
-      name: '',
+      login: '',
       password: '',
     },
   });
@@ -17,9 +18,17 @@ export const Login: React.FC<any> = () => {
   return (
     <S.Wrapper>
       <S.FormWrapper>
-        <S.Input type="text" name="name" placeholder="логин" />
-        <S.Input type="text" name="password" placeholder="пароль" />
-        <S.Button appearance="secondary">Войти</S.Button>
+        <S.Input type="text" name="login" placeholder="логин" ref={register({ required: true })} />
+        <S.Input
+          type="password"
+          name="password"
+          placeholder="пароль"
+          ref={register({ required: true })}
+          autoComplete="off"
+        />
+        <S.Button appearance="secondary" disabled={!formState.isValid} onClick={handleSubmit(onLogin)}>
+          Войти
+        </S.Button>
       </S.FormWrapper>
 
       <S.Link href="/">забыли пароль?</S.Link>

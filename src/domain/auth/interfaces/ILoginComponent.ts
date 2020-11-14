@@ -1,3 +1,8 @@
 export interface ILoginComponent {
-  onLogin: any;
+  onLogin: (fields: FormFields) => void;
+}
+
+export interface FormFields {
+  login: string;
+  password: string;
 }

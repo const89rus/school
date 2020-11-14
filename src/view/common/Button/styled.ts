@@ -4,6 +4,7 @@ import { colors } from 'assets/variables/colors';
 
 interface Style {
   appearance: 'primary' | 'secondary';
+  disabled?: boolean;
 }
 
 export const Button = styled.button<Style>`
@@ -13,5 +14,9 @@ export const Button = styled.button<Style>`
   cursor: pointer;
   &:hover {
     background-color: #d89f38;
+  }
+  &:disabled {
+    background-color: #a29b9b;
+    cursor: auto;
   }
 `;

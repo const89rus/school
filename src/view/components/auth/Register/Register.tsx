@@ -1,43 +1,84 @@
 import React from 'react';
-
 import { useForm } from 'react-hook-form';
+import { isEmpty } from 'lodash';
 
-import { ReactComponent as Vk } from 'assets/svg/vk.svg';
-import { ReactComponent as Insta } from 'assets/svg/insta.svg';
+import { IRegisterComponent, FormFields } from 'domain/auth/interfaces';
+import { isValidPassword, isValidEmail } from 'domain/app/utils/validate';
 
 import * as S from './styled';
 
-export const Register: React.FC<any> = () => {
-  const { register, formState } = useForm({
-    mode: 'onSubmit',
+export const Register: React.FC<IRegisterComponent> = ({ onRegister }) => {
+  const { register, formState, handleSubmit, errors } = useForm<FormFields>({
+    mode: 'onChange',
     defaultValues: {
       name: '',
       age: '',
       city: '',
       study: '',
-      mail: '',
-      direction: '',
-      insta: '',
-      vk: '',
+      email: '',
+      social: '',
       password: '',
       repeat: '',
     },
   });
 
+  console.log(errors);
+
   return (
     <S.Wrapper>
+      {!isEmpty(errors) && (
+        <S.ErorsWrapper>
+          <div>- Все поля обязательны</div>
+        </S.ErorsWrapper>
+      )}
       <S.FormWrapper>
-        <S.Input type="text" name="name" placeholder="ФИО" />
-        <S.Input type="text" name="age" placeholder="Возраст" />
-        <S.Input type="text" name="city" placeholder="Город" />
-        <S.Input type="text" name="study" placeholder="Место учебы" />
-        <S.Input type="email" name="mail" placeholder="Почта" />
-        <S.Input type="text" name="direction" placeholder="Выберите направление" />
-        <S.Input type="text" name="insta" placeholder="{<Insta />}" />
-        <S.Input type="text" name="vk" placeholder="{<Vk />}" />
-        <S.Input type="password" name="password" placeholder="Придумайте пароль" />
-        <S.Input type="password" name="repeat" placeholder="Повторите пароль" />
-        <S.Button appearance="secondary">Зарегистрироваться</S.Button>
+        <S.Input type="text" name="name" placeholder="ФИО" autoComplete="off" ref={register({ required: true })} />
+        <S.Input type="text" name="age" placeholder="Возраст" autoComplete="off" ref={register({ required: true })} />
+        <S.Input type="text" name="city" placeholder="Город" autoComplete="off" ref={register({ required: true })} />
+        <S.Input
+          type="text"
+          name="study"
+          placeholder="Место учебы"
+          autoComplete="off"
+          ref={register({ required: true })}
+        />
+        <S.Input type="email" name="email" placeholder="Почта" autoComplete="off" ref={register({ required: true })} />
+        <S.Input
+          type="text"
+          name="social"
+          placeholder="Ссылка на социальную сеть"
+          autoComplete="off"
+          ref={register({ required: true, validate: { validEmail: isValidEmail } })}
+        />
+        <S.Input
+          type="password"
+          name="password"
+          placeholder="Придумайте пароль"
+          autoComplete="off"
+          ref={register({
+            required: true,
+            minLength: { value: 5, message: 'Минимальная длина пароля 5 символов.' },
+            validate: {
+              symbols: isValidPassword,
+            },
+          })}
+        />
+        <S.Input
+          type="password"
+          name="repeat"
+          placeholder="Повторите пароль"
+          autoComplete="off"
+          ref={register({
+            required: true,
+            minLength: { value: 5, message: 'Минимальная длина пароля 5 символов.' },
+            validate: {
+              symbols: isValidPassword,
+            },
+          })}
+        />
+        <S.Button appearance="secondary" disabled={!formState.isValid} onClick={handleSubmit(onRegister)}>
+          Зарегистрироваться
+        </S.Button>
       </S.FormWrapper>
     </S.Wrapper>
   );
