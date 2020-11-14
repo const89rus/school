@@ -37,7 +37,7 @@ export const CardContent = styled.div<Style>`
   padding: 0 1rem;
   border-top: 20px solid;
   border-color: ${({ variant, theme }) => (variant === 'primaryDark' ? theme.colors.darkPrimary : theme.colors.yellow)};
-  width: 25rem;
+  width: 20rem;
   min-height: 16rem;
   max-height: 20rem;
   height: 100%;

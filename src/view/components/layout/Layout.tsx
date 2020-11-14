@@ -48,13 +48,13 @@ export const Layout: React.FC = ({ children }) => {
           <S.MenuItem to="/#team">преподаватели</S.MenuItem>
         </S.MenuItemWrapper>
         <S.MenuItemWrapper>
-          <S.MenuItem to="#">партнеры</S.MenuItem>
+          <S.MenuItem to="/#partners">партнеры</S.MenuItem>
         </S.MenuItemWrapper>
         <S.MenuItemWrapper>
-          <S.MenuItem to="#">анонсы</S.MenuItem>
+          <S.MenuItem to="/#announcement">анонсы</S.MenuItem>
         </S.MenuItemWrapper>
         <S.MenuItemWrapper>
-          <S.MenuItem to="#">СМИ о нас</S.MenuItem>
+          <S.MenuItem to="/#massmedia">СМИ о нас</S.MenuItem>
         </S.MenuItemWrapper>
       </S.MenuContainer>
 

@@ -16,7 +16,7 @@ export const Partners: React.FC = () => {
       headerVariant={colors.yellow}
       contentVariant={colors.yellow}
     >
-      <S.Wrapper>
+      <S.Wrapper id="partners">
         <S.Img src={partner1} alt="logo" />
         <S.Img src={partner2} alt="logo" />
       </S.Wrapper>

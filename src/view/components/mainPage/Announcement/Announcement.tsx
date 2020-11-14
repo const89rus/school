@@ -32,7 +32,7 @@ export const Announcement: React.FC = () => {
       headerVariant={colors.darkPrimary}
       contentVariant={colors.darkPrimary}
     >
-      <S.Wrapper>
+      <S.Wrapper id="announcement">
         {events.map((item) => (
           <Event
             key={item.id}

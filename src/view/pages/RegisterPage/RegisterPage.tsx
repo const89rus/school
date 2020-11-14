@@ -1,13 +1,10 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 
-export const RegisterPage: React.FC<RouteComponentProps> = () => {
-  console.log(12);
+import { LoginContainer } from 'domain/auth/containers';
 
-  return (
-    <div>
-      Register
-      <div>112</div>
-    </div>
-  );
+import { Register } from 'view/components/auth';
+
+export const RegisterPage: React.FC<RouteComponentProps> = () => {
+  return <LoginContainer component={Register} />;
 };

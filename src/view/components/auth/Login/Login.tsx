@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 import * as S from './styled';
 
@@ -21,11 +22,12 @@ export const Login: React.FC<any> = () => {
         <S.Button appearance="secondary">Войти</S.Button>
       </S.FormWrapper>
 
-      <div>забыли пароль?</div>
+      <S.Link href="/">забыли пароль?</S.Link>
 
-      <div>Еще нет аккаунта?</div>
-
-      <S.Button appearance="secondary">Зарегистрироваться</S.Button>
+      <S.Question>Еще нет аккаунта?</S.Question>
+      <Link to="/register">
+        <S.Button appearance="primary">Зарегистрироваться</S.Button>
+      </Link>
     </S.Wrapper>
   );
 };

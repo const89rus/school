@@ -13,18 +13,17 @@ export const Wrapper = styled.div`
 `;
 
 export const FormWrapper = styled.div`
-  height: 16.621rem;
-  width: 29.375rem;
+  height: 32.275rem;
+  width: 45.625rem;
   display: flex;
   flex-direction: column;
 `;
 
 export const Button = styled(ButtonUi)`
-  height: 4.308rem;
-  padding: 0.625rem 3.25rem;
-  font-size: 1.75rem;
-  font-weight: 400;
-  line-height: 1.95125rem;
+  padding: 0.625rem 11.4375rem;
+  height: 3.2425rem;
+  font-size: 1.875rem;
+  line-height: 2.063rem;
   color: ${colors.white};
   font-family: Comfortaa;
 `;
@@ -34,30 +33,15 @@ export const Input = styled.input`
   border: none;
   color: ${colors.primary};
   font-family: Comfortaa;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   line-height: 1.938rem;
   padding-left: 30px;
+  border-top: 3px dashed ${colors.primary};
   &::placeholder {
     color: ${colors.primary};
   }
 
   &:first-child {
-    border-bottom: 3px dashed ${colors.primary};
+    border-top: none;
   }
-`;
-
-export const Link = styled.a`
-  color: #fff;
-  font-size: 1.25rem;
-  margin: 0.5rem 0;
-  $:hover {
-    text-decoration: none;
-    color: red;
-  }
-`;
-
-export const Question = styled.div`
-  color: ${colors.white};
-  font-size: 1.75rem;
-  margin: 2.1875rem 0 1.6875rem;
 `;

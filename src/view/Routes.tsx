@@ -10,6 +10,7 @@ export const Routes: React.FC = () => {
       <Route path="/account" render={AccountPage} exact />
       <Route path="/register" render={RegisterPage} exact />
       <Route path="/login" render={LoginPage} exact />
+      <Route path="/register" render={RegisterPage} exact />
       <Route path="/reset-password" render={ResetPasswordPage} exact />
     </Switch>
   );
