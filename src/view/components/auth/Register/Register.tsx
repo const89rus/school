@@ -48,7 +48,7 @@ export const Register: React.FC<IRegisterComponent> = ({ onRegister }) => {
           name="social"
           placeholder="Ссылка на социальную сеть"
           autoComplete="off"
-          ref={register({ required: true, validate: { validEmail: isValidEmail } })}
+          ref={register({ required: true })}
         />
         <S.Input
           type="password"
@@ -58,9 +58,9 @@ export const Register: React.FC<IRegisterComponent> = ({ onRegister }) => {
           ref={register({
             required: true,
             minLength: { value: 5, message: 'Минимальная длина пароля 5 символов.' },
-            validate: {
-              symbols: isValidPassword,
-            },
+            // validate: {
+            //   symbols: isValidPassword,
+            // },
           })}
         />
         <S.Input
@@ -71,12 +71,12 @@ export const Register: React.FC<IRegisterComponent> = ({ onRegister }) => {
           ref={register({
             required: true,
             minLength: { value: 5, message: 'Минимальная длина пароля 5 символов.' },
-            validate: {
-              symbols: isValidPassword,
-            },
+            // validate: {
+            //   symbols: isValidPassword,
+            // },
           })}
         />
-        <S.Button appearance="secondary" disabled={!formState.isValid} onClick={handleSubmit(onRegister)}>
+        <S.Button appearance="secondary" onClick={handleSubmit(onRegister)}>
           Зарегистрироваться
         </S.Button>
       </S.FormWrapper>
