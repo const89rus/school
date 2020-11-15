@@ -1,4 +1,5 @@
 export interface ILoginComponent {
+  errorsMessage?: string;
   onLogin: (fields: FormFields) => void;
 }
 

@@ -11,12 +11,13 @@ import { colors } from 'assets/variables/colors';
 export const Partners: React.FC = () => {
   return (
     <Section
+      id="partners"
       header="Партнеры"
       variant={colors.darkPrimary}
       headerVariant={colors.yellow}
       contentVariant={colors.yellow}
     >
-      <S.Wrapper id="partners">
+      <S.Wrapper>
         <S.Img src={partner1} alt="logo" />
         <S.Img src={partner2} alt="logo" />
       </S.Wrapper>

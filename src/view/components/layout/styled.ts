@@ -57,16 +57,18 @@ export const MenuContainer = styled.div<IStyled>`
   justify-content: space-between;
 `;
 
-export const MenuItem = styled(HashLink)`
+export const MenuItem = styled.div`
   color: ${(props) => props.theme.colors.white};
   font-size: 1.5rem;
   text-decoration: none;
 `;
 
-export const MenuItemWrapper = styled.div`
+export const MenuItemWrapper = styled(HashLink)`
   cursor: pointer;
   display: flex;
   align-items: center;
+  text-decoration: none;
+  height: 5rem;
   &:hover {
     background-color: ${(props) => props.theme.colors.yellow};
   }

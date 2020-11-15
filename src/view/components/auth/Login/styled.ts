@@ -6,7 +6,7 @@ import { Button as ButtonUi } from 'view/common/Button/styled';
 export const Wrapper = styled.div`
   min-height: 80vh;
   background-color: ${colors.primary};
-  padding-top: 4.875rem;
+  padding: 4.875rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;

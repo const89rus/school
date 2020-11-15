@@ -4,4 +4,5 @@ export { Event } from './Event/Event';
 export { Section } from './Section/Section';
 export { Video } from './Video/Video';
 export { Post } from './Post/Post';
+export { Alert } from './Alert/Alert';
 export * from './Tab';

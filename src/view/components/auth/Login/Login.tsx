@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 
 import { ILoginComponent } from 'domain/auth/interfaces/ILoginComponent';
 
+import { Alert } from 'view/common';
+
 import * as S from './styled';
 
-export const Login: React.FC<ILoginComponent> = ({ onLogin }) => {
+export const Login: React.FC<ILoginComponent> = ({ onLogin, errorsMessage }) => {
   const { register, formState, handleSubmit } = useForm({
     mode: 'onChange',
     defaultValues: {
@@ -18,6 +20,7 @@ export const Login: React.FC<ILoginComponent> = ({ onLogin }) => {
   return (
     <S.Wrapper>
       <S.FormWrapper>
+        {errorsMessage && <Alert>{errorsMessage}</Alert>}
         <S.Input type="text" name="login" placeholder="логин" ref={register({ required: true })} />
         <S.Input
           type="password"
