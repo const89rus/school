@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { device } from 'assets/variables/mediaSizes';
+
 interface Style {
   variant?: 'primaryDark' | 'yellow';
 }
@@ -23,7 +25,7 @@ export const CardAvatar = styled.div<Style>`
   z-index: 5;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
 `;
 
 export const Img = styled.img<Style>`
@@ -37,7 +39,6 @@ export const CardContent = styled.div<Style>`
   padding: 0 1rem;
   border-top: 20px solid;
   border-color: ${({ variant, theme }) => (variant === 'primaryDark' ? theme.colors.darkPrimary : theme.colors.yellow)};
-  width: 20rem;
   min-height: 16rem;
   max-height: 20rem;
   height: 100%;
@@ -47,10 +48,26 @@ export const CardContent = styled.div<Style>`
   align-items: center;
   flex-direction: column;
   background-color: ${(props) => props.theme.colors.white};
+  @media ${device.laptopL} {
+    width: 17rem;
+  }
+  @media ${device.desktop} {
+    width: 20rem;
+  }
 `;
 
 export const Name = styled.span<Style>`
   font-size: 1.5rem;
   margin: 3rem 0 0.2rem;
   color: ${(props) => props.theme.colors.primary};
+`;
+
+export const Position = styled.span`
+  font-size: 1rem;
+  @media ${device.laptopL} {
+    font-size: 0.8rem;
+  }
+  @media ${device.desktop} {
+    width: 20rem;
+  }
 `;

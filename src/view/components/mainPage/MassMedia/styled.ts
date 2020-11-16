@@ -11,3 +11,7 @@ export const Line = styled.div`
   align-items: center;
   margin-bottom: 1rem;
 `;
+
+export const VideoWrapper = styled.div`
+  width: 39%;
+`;

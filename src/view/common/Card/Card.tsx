@@ -20,7 +20,7 @@ export const Card: React.FC<Props> = ({ name, img, alt = 'avatar', position, var
       </S.CardAvatar>
       <S.CardContent variant={variant}>
         <S.Name>{name}</S.Name>
-        <span>{position}</span>
+        <S.Position>{position}</S.Position>
       </S.CardContent>
     </S.CardWrapper>
   );
