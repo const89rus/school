@@ -25,28 +25,28 @@ export const Curator: React.FC<Props> = ({ name, img, alt = 'avatar', age, city,
         <S.Img src={img} alt={alt} />
       </S.CuratorAvatar>
       <S.CuratorContent>
-        <S.Name>{name}, {age}</S.Name>
+        <S.Name>
+          {name}, {age}
+        </S.Name>
         <S.Info>
-            <span>{city}</span>
-            <span>{mail}</span>
-            <span>{uneversity}</span>
-            <S.Social>
-                <Link to={insta}>
-                  <S.SocialContainer>
-                    <Insta />
-                  </S.SocialContainer>
-                </Link>                
-                <Link to={vk}>
-                <S.SocialContainer>
-                    <Vk />
-                  </S.SocialContainer>
-                </Link>
-            </S.Social>
+          <span>{city}</span>
+          <span>{mail}</span>
+          <span>{uneversity}</span>
+          <S.Social>
+            <Link to={insta}>
+              <S.SocialContainer>
+                <Insta />
+              </S.SocialContainer>
+            </Link>
+            <Link to={vk}>
+              <S.SocialContainer>
+                <Vk />
+              </S.SocialContainer>
+            </Link>
+          </S.Social>
         </S.Info>
       </S.CuratorContent>
-      <S.Edit href="/">
-        редактировать профиль
-      </S.Edit>
+      <S.Edit href="/">редактировать профиль</S.Edit>
     </S.CuratorWrapper>
   );
 };

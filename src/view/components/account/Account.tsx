@@ -1,15 +1,19 @@
 import React from 'react';
 
-import { ProfileContainer, PlayListContainer } from 'domain/account/containers';
+import { ProfileContainer } from 'domain/account/containers';
 
 import { Profile } from './Profile/Profile';
-import { Playlist } from './Playlist/Playlist';
+
+import { Tabs } from './Tabs/Tabs';
+
+import * as S from './styled';
 
 export const Account: React.FC = () => {
   return (
-    <div>
+    <S.Wrapper>
       <ProfileContainer component={Profile} />
-      <PlayListContainer component={Playlist} />
-    </div>
+
+      <Tabs />
+    </S.Wrapper>
   );
 };

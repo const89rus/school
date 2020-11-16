@@ -47,15 +47,16 @@ const cards = [
   },
 ];
 
-export const Lesson: React.FC = () => {
+export const Lesson: React.FC<any> = ({ videos }) => {
+  console.log(videos);
+
+  if (videos) return null;
+
   return (
     <S.Wrapper>
-      {cards.map((item, i) => (
+      {cards.map((item) => (
         <S.VideoWrapper key={item.id}>
-          <Video
-            src={item.src}
-            headline={item.headline}
-          />
+          <Video src={item.src} headline={item.headline} />
         </S.VideoWrapper>
       ))}
     </S.Wrapper>

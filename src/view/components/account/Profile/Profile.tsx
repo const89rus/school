@@ -15,8 +15,16 @@ export const Profile: React.FC<any> = ({ profile }) => {
 
   return (
     <S.Wrapper>
-      <Curator img={Img1} name="Давлетшина Марина Отчество" age="25" city="г. Ноябрьск" mail="marinathebest@gmail.ru" uneversity="МГУ" vk="#" insta="#" />
-      <Tabs />
+      <Curator
+        img={Img1}
+        name="Давлетшина Марина Отчество"
+        age="25"
+        city="г. Ноябрьск"
+        mail="marinathebest@gmail.ru"
+        uneversity="МГУ"
+        vk="#"
+        insta="#"
+      />
     </S.Wrapper>
   );
 };
