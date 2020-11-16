@@ -36,20 +36,12 @@ export const Input = styled.input`
   font-size: 1.5rem;
   line-height: 1.938rem;
   padding-left: 30px;
-  border-top: 3px dashed ${colors.primary};
+  border-bottom: 3px dashed ${colors.primary};
   &::placeholder {
     color: ${colors.primary};
   }
 
-  &:first-child {
-    border-top: none;
+  &:last-child {
+    border-bottom: none;
   }
-`;
-
-export const ErorsWrapper = styled.div`
-  background-color: #f36c6c;
-  padding: 1rem;
-  width: 45.625rem;
-  box-sizing: border-box;
-  margin-bottom: 0.625rem;
 `;

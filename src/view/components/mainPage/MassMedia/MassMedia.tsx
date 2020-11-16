@@ -10,8 +10,14 @@ import * as S from './styled';
 
 export const MassMedia: React.FC = () => {
   return (
-    <Section header="СМИ о нас" variant={colors.yellow} headerVariant={colors.primary} contentVariant={colors.primary}>
-      <S.Wrapper id="massmedia">
+    <Section
+      header="СМИ о нас"
+      variant={colors.yellow}
+      headerVariant={colors.primary}
+      contentVariant={colors.primary}
+      id="massmedia"
+    >
+      <S.Wrapper>
         <S.Line>
           <S.VideoWrapper>
             <Video

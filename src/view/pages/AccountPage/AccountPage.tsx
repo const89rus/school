@@ -1,14 +1,8 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 
-import { ProfileContainer } from 'domain/account/containers/ProfileContainer';
-
-import { Profile } from 'view/components/account/Profile/Profile';
+import { Account } from 'view/components/account/Account';
 
 export const AccountPage: React.FC<RouteComponentProps> = () => {
-  return (
-    <div>
-      <ProfileContainer component={Profile} />
-    </div>
-  );
+  return <Account />;
 };

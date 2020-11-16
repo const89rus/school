@@ -12,9 +12,9 @@ interface Props {
 export const RegisterContainer: React.FC<Props> = ({ component: Component }) => {
   const history = useHistory();
   const [errors, setErrors] = useState<string>();
+
   const onRegister = useCallback(
     async (fields: FormFields) => {
-      console.log(fields);
       try {
         const { email, password, repeat, ...rest } = fields;
 
@@ -42,10 +42,11 @@ export const RegisterContainer: React.FC<Props> = ({ component: Component }) => 
         history.push('/account');
       } catch (error) {
         alert(error.message);
+        setErrors('Извините, произошла техническая ошибка. Попробуйте позже');
       }
     },
     [history]
   );
 
-  return <Component onRegister={onRegister} errors={errors} />;
+  return <Component onRegister={onRegister} errorsMessage={errors} />;
 };

@@ -10,7 +10,6 @@ interface Props {
 
 export const ProfileContainer: React.FC<Props> = ({ component: Component }) => {
   const [profile, setProfile] = useState<any>(null);
-  const [errors, setErrors] = useState<string>();
 
   const mountedRef = useRef(true);
 

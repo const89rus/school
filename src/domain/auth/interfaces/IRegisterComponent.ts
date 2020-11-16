@@ -1,5 +1,5 @@
 export interface IRegisterComponent {
-  errors?: string;
+  errorsMessage?: string;
   onRegister: (fields: FormFields) => Promise<void>;
 }
 

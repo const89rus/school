@@ -15,22 +15,19 @@ export const LoginContainer: React.FC<Props> = ({ component: Component }) => {
 
   const onLogin = useCallback(
     async (fields: FormFields) => {
-      console.log(fields);
       try {
         const { login, password } = fields;
 
         const auth = fb.auth();
         await auth.signInWithEmailAndPassword(login, password);
 
-        history.push('/account');
+        history.push('/');
       } catch (error) {
-        console.log(error);
-
-        alert(error.message);
+        setErrors('Неверный логин или пароль.');
       }
     },
     [history]
   );
 
-  return <Component onLogin={onLogin} />;
+  return <Component onLogin={onLogin} errorsMessage={errors} />;
 };

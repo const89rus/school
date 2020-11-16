@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components';
 import { AuthContextProvider } from 'data/auth/AuthContextProvider';
 
 import { Routes } from 'view/Routes';
-import { Layout } from 'view/components/layout/Layout';
 
 import { theme } from 'assets/theme';
 
@@ -14,9 +13,7 @@ export const App: React.FC = () => {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <AuthContextProvider>
-          <Layout>
-            <Routes />
-          </Layout>
+          <Routes />
         </AuthContextProvider>
       </BrowserRouter>
     </ThemeProvider>

@@ -28,11 +28,12 @@ export const Announcement: React.FC = () => {
   return (
     <Section
       header="Анонс"
+      id="announcement"
       variant={colors.primary}
       headerVariant={colors.darkPrimary}
       contentVariant={colors.darkPrimary}
     >
-      <S.Wrapper id="announcement">
+      <S.Wrapper>
         {events.map((item) => (
           <Event
             key={item.id}
