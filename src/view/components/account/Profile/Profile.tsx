@@ -14,7 +14,7 @@ export const Profile: React.FC<any> = ({ profile }) => {
   if (!profile) return <div>loading</div>;
 
   return (
-    <S.Wrapper>
+    <div>
       <Curator
         img={Img1}
         name="Давлетшина Марина Отчество"
@@ -25,6 +25,6 @@ export const Profile: React.FC<any> = ({ profile }) => {
         vk="#"
         insta="#"
       />
-    </S.Wrapper>
+    </div>
   );
 };
