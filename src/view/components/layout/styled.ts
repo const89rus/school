@@ -15,6 +15,9 @@ export const Layout = styled.div`
   display: flex;
   padding: ${(props) => props.theme.root.contentPadding};
   justify-content: space-between;
+  @media (max-width: 1280px) {
+    padding: 0 13rem;
+  }
 `;
 
 export const Button = styled(ButtonUi)`

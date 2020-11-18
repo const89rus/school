@@ -23,6 +23,7 @@ export const HomeworkWrapper = styled.div`
   height: 18.25rem;
   width: 58rem;
   padding: 1rem;
+  margin-top: 8rem;
 `;
 
 export const HomerworkItemsWrapper = styled.div`

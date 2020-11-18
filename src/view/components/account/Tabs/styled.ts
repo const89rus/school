@@ -38,21 +38,31 @@ export const Text = styled(TabHeaderUi)<Style>`
   font-size: 1.375rem;
   bottom: 0.75rem;
   position: absolute;
+  @media (max-width: 1330px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const Wrapper = styled.div`
   position: relative;
 `;
 
-export const ContentWrapper = styled.div` 
+export const ContentWrapper = styled.div`
   width: 50.375rem;
   height: 39.9375rem;
   overflow-y: hidden;
   overflow-x: scroll;
   background-color: ${(props) => props.theme.colors.primary};
+  @media (max-width: 1850px) {
+    width: 45.375rem;
+  }
+  @media (max-width: 1330px) {
+    width: 40.3rem;
+    height: 31.95rem;
+  }
 `;
-
 
 export const Input = styled.div`
   margin: 5rem 0 0 1rem;
+  position: absolute;
 `;

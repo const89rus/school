@@ -8,10 +8,18 @@ export const CuratorWrapper = styled.div`
   padding: 0.8rem;
   width: 15.875rem;
   height: 33.875rem;
+  @media (min-width: 1600px) and (max-width: 1800px) {
+    width: 14.2875rem;
+    height: 30.4875rem;
+  }
+  @media (max-width: 1330px) {
+    width: 12.7rem;
+    height: 27.1rem;
+  }
 `;
 
 export const CuratorAvatar = styled.div`
-  width: 100%
+  width: 100%;
 `;
 
 export const Img = styled.img`

@@ -2,6 +2,12 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   width: 40.625rem;
+  @media (max-width: 1850px) {
+    width: 36.625rem;
+  }
+  @media (max-width: 1330px) {
+    width: 32.5rem;
+  }
 `;
 
 export const Label = styled.label`
@@ -21,6 +27,9 @@ export const Label = styled.label`
   }
   &:hover {
     background-color: ${(props) => props.theme.colors.primary};
+  }
+  @media (max-width: 1330px) {
+    font-size: 1.1rem;
   }
 `;
 
@@ -49,6 +58,9 @@ export const FakeField = styled.span`
   height: 2.875rem;
   display: flex;
   align-items: center;
+  @media (max-width: 1330px) {
+    width: calc(100% - 7.5rem);
+  }
 `;
 
 export const SmileWrapper = styled.span`
@@ -58,5 +70,5 @@ export const SmileWrapper = styled.span`
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 6rem;
+  right: -3rem;
 `;
