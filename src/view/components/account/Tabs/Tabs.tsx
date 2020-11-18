@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { PlayListContainer } from 'domain/account/containers';
 
-import { Tab, TabContent } from 'view/common';
+import { Tab, TabContent, Upload } from 'view/common';
 
 import { Homework, Lesson } from './components';
 
@@ -32,7 +32,9 @@ export const Tabs: React.FC = () => {
 
         <S.ContentWrapper>
           <TabContent value="homework">
-            <S.Input type="file" />
+            <S.Input>
+              <Upload label="загрузить" />
+            </S.Input>
             <Homework />
           </TabContent>
 

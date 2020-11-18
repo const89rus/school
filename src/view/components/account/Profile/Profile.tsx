@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Tabs } from '../Tabs/Tabs';
 import { Curator } from 'view/common';
 
 import Img1 from 'assets/img/Marina_Davletshina.jpg';

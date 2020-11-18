@@ -14,4 +14,5 @@ export const Line = styled.div`
 
 export const VideoWrapper = styled.div`
   width: 39%;
+  height: 15rem;
 `;

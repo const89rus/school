@@ -46,18 +46,13 @@ export const Wrapper = styled.div`
 
 export const ContentWrapper = styled.div` 
   width: 50.375rem;
-  height: 36.9375rem;
+  height: 39.9375rem;
   overflow-y: hidden;
   overflow-x: scroll;
   background-color: ${(props) => props.theme.colors.primary};
 `;
 
 
-export const Input = styled.input`
-  height: 6.144rem;
-  border: none;
-  font-family: Comfortaa;
-  font-size: 1.75rem;
-  line-height: 1.938rem;
-  padding-left: 30px;
+export const Input = styled.div`
+  margin: 5rem 0 0 1rem;
 `;

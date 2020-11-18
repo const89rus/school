@@ -6,4 +6,6 @@ export { Video } from './Video/Video';
 export { Post } from './Post/Post';
 export { Curator } from './Curator/Curator';
 export { Alert } from './Alert/Alert';
+export { HomeworkItem } from './HomeworkItem/HomeworkItem';
+export { Upload } from './Upload/Upload';
 export * from './Tab';

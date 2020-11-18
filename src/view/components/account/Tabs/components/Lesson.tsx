@@ -50,7 +50,7 @@ const cards = [
 export const Lesson: React.FC<any> = ({ videos }) => {
   console.log(videos);
 
-  if (videos) return null;
+  //if (videos) return null;
 
   return (
     <S.Wrapper>

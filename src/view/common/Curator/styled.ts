@@ -42,6 +42,7 @@ export const Info = styled.div`
   color: ${(props) => props.theme.colors.white};
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   font-size: 1rem;
   height: 7rem;
 `;
@@ -49,7 +50,7 @@ export const Info = styled.div`
 export const Social = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 3.5rem
+  width: 3.5rem;
 `;
 
 export const Edit = styled.a`

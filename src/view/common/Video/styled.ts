@@ -5,7 +5,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Iframe = styled.div`
-  height: 15rem;
+  height: auto;
+  display: flex;
 `;
 
 export const HeadlineVideo = styled.div`
