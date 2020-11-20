@@ -3,6 +3,8 @@ import { HashLink } from 'react-router-hash-link';
 
 import { Button as ButtonUi } from 'view/common';
 
+import { device } from 'assets/variables/mediaSizes';
+
 import { ReactComponent as LogoSvg } from 'assets/svg/logo.svg';
 
 interface IStyled {
@@ -26,6 +28,9 @@ export const Button = styled(ButtonUi)`
   width: 23.125rem;
   font-size: 2rem;
   border: none;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const SocialContainer = styled.div`

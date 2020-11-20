@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { device } from 'assets/variables/mediaSizes';
+
 export const CuratorWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
   display: flex;
@@ -16,14 +18,27 @@ export const CuratorWrapper = styled.div`
     width: 12.7rem;
     height: 27.1rem;
   }
+  @media ${device.mobileS} and (max-width: 1024px) {
+    width: auto;
+    height: auto;
+    padding: 2.5rem;
+  }
 `;
 
 export const CuratorAvatar = styled.div`
   width: 100%;
+  @media ${device.mobileS} and (max-width: 1024px) {
+    display: flex;
+    aligh-items: center;
+    justify-content: center;
+  }
 `;
 
 export const Img = styled.img`
   width: 100%;
+  @media ${device.mobileL} and (max-width: 1024px) {
+    width: 70%;
+  }
 `;
 
 export const SocialContainer = styled.div`
@@ -38,6 +53,9 @@ export const CuratorContent = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  @media ${device.mobileS} and (max-width: 1024px) {
+    padding: 2rem 5rem;
+  }
 `;
 
 export const Name = styled.div`
@@ -65,4 +83,10 @@ export const Edit = styled.a`
   color: ${(props) => props.theme.colors.yellow};
   font-size: 0.8rem;
   text-decoration: none;
+  @media ${device.tablet} and (max-width: 1024px) {
+    padding: 0 0 2rem 5rem;
+  }
+  @media ${device.mobileS} and (max-width: 768px) {
+    padding: 0 5rem;
+  }
 `;
