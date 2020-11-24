@@ -26,7 +26,7 @@ export const Label = styled.label`
     pointer-events: none;
   }
   &:hover {
-    background-color: ${(props) => props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.darkPrimary};
   }
   @media (max-width: 1330px) {
     font-size: 1.1rem;

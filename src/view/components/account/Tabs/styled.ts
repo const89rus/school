@@ -27,7 +27,7 @@ export const TabHeader = styled(TabHeaderUi)<Style>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => (props.active ? props.theme.colors.primary : props.theme.colors.yellow)};
+  background-color: ${(props) => (props.active ? props.theme.colors.primary : props.theme.colors.primaryHalf)};
   &:hover {
     background-color: ${(props) => props.theme.colors.primary};
   }
