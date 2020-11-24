@@ -47,13 +47,28 @@ export const SocialContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media ${device.tablet} and (max-width: 1023px) {
+    width: 2rem;
+    margin-top: 1rem;
+  }
+  @media ${device.mobileL} and (max-width: 768px) {
+    width: 2.5rem;
+    margin-top: 1rem;
+  }
+  @media ${device.mobileS} and (max-width: 425px) {
+    width: 3rem;
+    margin-top: 1rem;
+  }
 `;
 
 export const CuratorContent = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  @media ${device.mobileL} and (max-width: 1023px) {
+  @media ${device.tablet} and (max-width: 1023px) {
+    padding: 2rem 10rem;
+  }
+  @media ${device.mobileL} and (max-width: 768px) {
     padding: 2rem 5rem;
   }
   @media ${device.mobileS} and (max-width: 425px) {
@@ -65,6 +80,15 @@ export const Name = styled.div`
   text-align: center;
   font-size: 1.5rem;
   color: ${(props) => props.theme.colors.yellow};
+  @media ${device.tablet} and (max-width: 1023px) {
+    font-size: 1.5rem;
+  }
+  @media ${device.mobileL} and (max-width: 768px) {
+    font-size: 2rem;
+  }
+  @media ${device.mobileS} and (max-width: 425px) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const Info = styled.div`
@@ -74,25 +98,60 @@ export const Info = styled.div`
   justify-content: space-around;
   font-size: 1rem;
   height: 7rem;
+  @media ${device.tablet} and (max-width: 1023px) {
+    padding: 2rem 0;
+    font-size: 1.4rem;
+  }
+  @media ${device.mobileL} and (max-width: 768px) {
+    padding: 1.7rem 0;
+    font-size: 2rem;
+  }
+  @media ${device.mobileS} and (max-width: 425px) {
+    padding: 2rem 0;
+    font-size: 2rem;
+  }
 `;
 
 export const Social = styled.div`
   display: flex;
   justify-content: space-between;
   width: 3.5rem;
+  @media ${device.tablet} and (max-width: 1023px) {
+    width: 4.5rem;
+  }
+  @media ${device.mobileL} and (max-width: 768px) {
+    width: 5rem;
+  }
+  @media ${device.mobileS} and (max-width: 425px) {
+    width: 6rem;
+  }
 `;
 
-export const Edit = styled.a`
+export const BottomInfo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: ${(props) => props.theme.colors.yellow};
   font-size: 0.8rem;
   text-decoration: none;
   @media ${device.tablet} and (max-width: 1023px) {
-    padding: 0 0 2rem 5rem;
+    padding: 0 10rem 2rem 10rem;
+    font-size: 1.2rem;
   }
   @media ${device.mobileL} and (max-width: 768px) {
     padding: 0 5rem;
+    font-size: 1.5rem;
   }
   @media ${device.mobileS} and (max-width: 425px) {
     padding: 0;
+    font-size: 1.8rem;
   }
+`;
+
+export const Edit = styled.a`
+  width: auto;
+`;
+
+export const LogOut = styled.a`
+  width: auto;
 `;

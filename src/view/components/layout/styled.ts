@@ -39,11 +39,15 @@ export const Button = styled(ButtonUi)`
 export const SocialContainer = styled.div`
   margin-left: 1.875rem;
   background-color: ${(props) => props.theme.colors.darkPrimary};
+  cursor: pointer;
   height: 4.063rem;
   width: 4.375rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover {
+    background-color: #075f6bb2;
+  }
 `;
 
 export const Wrapper = styled.div`

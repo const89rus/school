@@ -46,7 +46,10 @@ export const Curator: React.FC<Props> = ({ name, img, alt = 'avatar', age, city,
           </S.Social>
         </S.Info>
       </S.CuratorContent>
-      <S.Edit href="/">редактировать профиль</S.Edit>
+      <S.BottomInfo>
+        <S.Edit href="/">редактировать профиль</S.Edit>
+        <S.LogOut href="/">выйти</S.LogOut>
+      </S.BottomInfo>
     </S.CuratorWrapper>
   );
 };
