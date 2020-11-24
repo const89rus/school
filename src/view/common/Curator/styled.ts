@@ -53,8 +53,11 @@ export const CuratorContent = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  @media ${device.mobileS} and (max-width: 1024px) {
+  @media ${device.mobileL} and (max-width: 1024px) {
     padding: 2rem 5rem;
+  }
+  @media ${device.mobileS} and (max-width: 425px) {
+    padding: 2rem 0;
   }
 `;
 
@@ -86,7 +89,10 @@ export const Edit = styled.a`
   @media ${device.tablet} and (max-width: 1024px) {
     padding: 0 0 2rem 5rem;
   }
-  @media ${device.mobileS} and (max-width: 768px) {
+  @media ${device.mobileL} and (max-width: 768px) {
     padding: 0 5rem;
+  }
+  @media ${device.mobileS} and (max-width: 425px) {
+    padding: 0;
   }
 `;

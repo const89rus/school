@@ -53,12 +53,12 @@ export const Lesson: React.FC<any> = ({ videos }) => {
   //if (videos) return null;
 
   return (
-    <S.Wrapper>
+    <S.LessonWrapper>
       {cards.map((item) => (
         <S.VideoWrapper key={item.id}>
           <Video src={item.src} headline={item.headline} />
         </S.VideoWrapper>
       ))}
-    </S.Wrapper>
+    </S.LessonWrapper>
   );
 };

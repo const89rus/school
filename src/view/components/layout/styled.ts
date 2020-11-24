@@ -20,6 +20,9 @@ export const Layout = styled.div`
   @media (max-width: 1280px) {
     padding: 0 13rem;
   }
+  @media ${device.mobileS} and (max-width: 500px) {
+    padding: 0 5rem;
+  }
 `;
 
 export const Button = styled(ButtonUi)`
