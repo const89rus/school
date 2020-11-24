@@ -14,6 +14,7 @@ export const CardWrapper = styled.div<Style>`
   justify-content: center;
   position: relative;
   margin: 2rem 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.21);
 `;
 
 export const CardAvatar = styled.div<Style>`
