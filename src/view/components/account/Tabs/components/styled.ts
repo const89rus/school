@@ -14,7 +14,7 @@ export const LessonWrapper = styled.div`
   width: 50.375rem;
   height: 30.9375rem;
   font-size: 0.8125rem;
-  @media ${device.mobileS} and (max-width: 1024px) {
+  @media ${device.mobileS} and (max-width: 1023px) {
     width: auto;
     height: auto;
     overflow-x: scroll;
@@ -26,7 +26,7 @@ export const LessonWrapper = styled.div`
 export const VideoWrapper = styled.div`
   height: 4.625rem;
   width: 12.1875rem;
-  @media ${device.mobileS} and (max-width: 1024px) {
+  @media ${device.mobileS} and (max-width: 1023px) {
     width: auto;
     height: auto;
     align-self: start;
@@ -38,7 +38,7 @@ export const HomeworkWrapper = styled.div`
   width: 58rem;
   padding: 1rem;
   margin-top: 8rem;
-  @media ${device.mobileS} and (max-width: 1024px) {
+  @media ${device.mobileS} and (max-width: 1023px) {
     margin: 0;
     width: auto;
     overflow-x: scroll;

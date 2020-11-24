@@ -31,7 +31,7 @@ export const Button = styled(ButtonUi)`
   width: 23.125rem;
   font-size: 2rem;
   border: none;
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     display: none;
   }
 `;

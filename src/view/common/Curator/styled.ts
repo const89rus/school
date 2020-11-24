@@ -18,7 +18,7 @@ export const CuratorWrapper = styled.div`
     width: 12.7rem;
     height: 27.1rem;
   }
-  @media ${device.mobileS} and (max-width: 1024px) {
+  @media ${device.mobileS} and (max-width: 1023px) {
     width: auto;
     height: auto;
     padding: 2.5rem;
@@ -27,7 +27,7 @@ export const CuratorWrapper = styled.div`
 
 export const CuratorAvatar = styled.div`
   width: 100%;
-  @media ${device.mobileS} and (max-width: 1024px) {
+  @media ${device.mobileS} and (max-width: 1023px) {
     display: flex;
     aligh-items: center;
     justify-content: center;
@@ -36,7 +36,7 @@ export const CuratorAvatar = styled.div`
 
 export const Img = styled.img`
   width: 100%;
-  @media ${device.mobileL} and (max-width: 1024px) {
+  @media ${device.mobileL} and (max-width: 1023px) {
     width: 70%;
   }
 `;
@@ -53,7 +53,7 @@ export const CuratorContent = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  @media ${device.mobileL} and (max-width: 1024px) {
+  @media ${device.mobileL} and (max-width: 1023px) {
     padding: 2rem 5rem;
   }
   @media ${device.mobileS} and (max-width: 425px) {
@@ -86,7 +86,7 @@ export const Edit = styled.a`
   color: ${(props) => props.theme.colors.yellow};
   font-size: 0.8rem;
   text-decoration: none;
-  @media ${device.tablet} and (max-width: 1024px) {
+  @media ${device.tablet} and (max-width: 1023px) {
     padding: 0 0 2rem 5rem;
   }
   @media ${device.mobileL} and (max-width: 768px) {

@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   @media (max-width: 1280px) {
     padding: 2.5rem 13rem 0;
   }
-  @media ${device.mobileS} and (max-width: 1024px) {
+  @media ${device.mobileS} and (max-width: 1023px) {
     padding: 0;
     flex-direction: column;
     justify-content: center;
@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
 
 export const MobileMenuWrapper = styled.div`
   display: none;
-  @media ${device.mobileS} and (max-width: 1024px) {
+  @media ${device.mobileS} and (max-width: 1023px) {
     display: block;
   }
 `;
@@ -43,7 +43,7 @@ export const MobileMenu = styled.div`
 `;
 
 export const TabsWrapper = styled.div`
-  @media ${device.mobileS} and (max-width: 1024px) {
+  @media ${device.mobileS} and (max-width: 1023px) {
     display: none;
   }
 `;
@@ -52,7 +52,7 @@ export const MobileHomework = styled.div`
   display: none;
   padding: 1rem 2.25rem;
   background-color: ${(props) => props.theme.colors.darkPrimary};
-  @media ${device.mobileS} and (max-width: 1024px) {
+  @media ${device.mobileS} and (max-width: 1023px) {
     display: grid;
     padding: 2rem 2.25rem;
   }
@@ -62,7 +62,7 @@ export const MobileLesson = styled.div`
   display: none;
   padding: 1rem 2.25rem;
   background-color: ${(props) => props.theme.colors.yellow};
-  @media ${device.mobileS} and (max-width: 1024px) {
+  @media ${device.mobileS} and (max-width: 1023px) {
     display: flex;
     flex-direction: column;
   }
@@ -72,7 +72,7 @@ export const MobileTabsHeader = styled.div`
   font-size: 1.5rem;
   color: ${(props) => props.theme.colors.white};
   text-align: left;
-  @media ${device.mobileS} and (max-width: 1024px) {
+  @media ${device.mobileS} and (max-width: 1023px) {
     padding: 2rem 0;
   }
 `;

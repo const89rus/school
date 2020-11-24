@@ -22,7 +22,7 @@ export const Label = styled.label`
   color: ${(props) => props.theme.colors.white};
   &:focus {
     background-color: ${(props) => props.theme.colors.primary};
-    outline: 1px dotted #000;
+    outline: 1px dotted ${(props) => props.theme.colors.black};
     pointer-events: none;
   }
   &:hover {

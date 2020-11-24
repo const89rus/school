@@ -39,6 +39,12 @@ a {
   background-color: #FFFFFF;
 }
 
+@media screen and (max-width: 1023px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 ::-webkit-scrollbar:hover {
   background-color: #075F6B;
 }
