@@ -5,6 +5,8 @@ import { fb } from 'data/firebase/firebase';
 
 import { AuthContext } from './AuthContext';
 
+import { Spinner } from 'view/common';
+
 export const AuthContextProvider: React.FC = ({ children }) => {
   const [currentUser, setCurrentUser] = useState<firebase.User | null>(null);
   const [loading, setLoading] = useState(true);
@@ -17,7 +19,7 @@ export const AuthContextProvider: React.FC = ({ children }) => {
   }, []);
 
   if (loading) {
-    return <span>Loading</span>;
+    return <Spinner />;
   }
 
   return (

@@ -3,8 +3,9 @@ import React from 'react';
 import * as S from './styled';
 
 interface Props {
-  src: string;
-  headline: string;
+  src?: string;
+  headline?: string;
+  videos?: string;
 }
 
 export const Video: React.FC<Props> = ({ src, headline }) => {
