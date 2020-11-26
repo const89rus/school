@@ -6,7 +6,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Iframe = styled.div`
-  height: auto;
+  height: 16.5rem;
+  width: 100%;
   display: flex;
 `;
 

@@ -18,5 +18,5 @@ export const Fragment = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${(props) => props.theme.colors.yellow};
-  height: 15rem;
+  height: 16.5rem;
 `;

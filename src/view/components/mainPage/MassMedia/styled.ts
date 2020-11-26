@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 export const Line = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 1rem;
 `;
 

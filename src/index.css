@@ -35,12 +35,12 @@ a {
 }
 
 iframe {
-  width: 15.5625rem;
-  height: 8.74125rem;
+  width: 100%;
+  height: 100%;
   border: 5px solid #F6AE2D;
   box-sizing: border-box;
   vertical-align: bottom;
-}
+} 
 
 @media screen and (max-width: 1023px) {
   iframe {
