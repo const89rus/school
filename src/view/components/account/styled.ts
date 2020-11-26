@@ -13,8 +13,8 @@ export const Wrapper = styled.div`
   @media (min-width: 1600px) and (max-width: 1800px) {
     padding: 2.5rem 20.5rem 0;
   }
-  @media (max-width: 1600px) {
-    padding: 2.5rem 23.5rem 0;
+  @media (min-width: 1450px) and (max-width: 1600px) {
+    padding: 2.5rem 25.5rem 0;
   }
   @media (max-width: 1280px) {
     padding: 2.5rem 13rem 0;
