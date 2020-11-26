@@ -51,3 +51,22 @@ export const HomerworkItemsWrapper = styled.div`
   grid-template-rows: repeat(2, minmax(8.1875rem, 1fr));
   grid-gap: 1.875rem;
 `;
+
+export const YouTubeWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 14.5625rem;
+`;
+
+export const YouTubeTitle = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: ${(props) => props.theme.colors.white};
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.5rem;
+  height: auto;
+  width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.21);
+`;

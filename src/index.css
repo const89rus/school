@@ -34,6 +34,20 @@ a {
   }
 }
 
+iframe {
+  width: 15.5625rem;
+  height: 8.74125rem;
+  border: 5px solid #F6AE2D;
+  box-sizing: border-box;
+  vertical-align: bottom;
+}
+
+@media screen and (max-width: 1023px) {
+  iframe {
+    border: 2.5px solid #1794A5
+  }
+}
+
 ::-webkit-scrollbar {
   width: 15px;
   background-color: #FFFFFF;

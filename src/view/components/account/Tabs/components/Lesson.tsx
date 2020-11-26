@@ -3,8 +3,6 @@ import YouTube from 'react-youtube';
 
 import { LessonsComponent } from 'domain/account/interfaces/LessonsComponent';
 
-import { Video } from 'view/common';
-
 import * as S from './styled';
 
 export const Lesson: React.FC<LessonsComponent> = ({ videos }) => {
@@ -14,8 +12,10 @@ export const Lesson: React.FC<LessonsComponent> = ({ videos }) => {
 
   const videosMap = videos.map((item) => (
     <S.VideoWrapper key={item.etag}>
-      {/* <Video src={item.snippet.thumbnails.default.url} headline={item.snippet.title} /> */}
-      <YouTube videoId={item.id.videoId} />
+      <S.YouTubeWrapper>
+        <YouTube videoId={item.id.videoId} />
+        <S.YouTubeTitle>{item.snippet.title}</S.YouTubeTitle>
+      </S.YouTubeWrapper>
     </S.VideoWrapper>
   ));
 
