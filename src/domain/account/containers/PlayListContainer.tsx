@@ -2,14 +2,17 @@ import React, { useCallback, useState, useEffect, useContext, useRef } from 'rea
 
 import { AuthContext } from 'data/auth/AuthContext';
 
+import { YoutubeVideoList } from '../interfaces/Youtube';
+import { LessonsComponent } from '../interfaces/LessonsComponent';
+
 interface Props {
-  component: React.ElementType<any>;
+  component: React.ElementType<LessonsComponent>;
 }
 
-const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/channels';
+const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/search';
 
 export const PlayListContainer: React.FC<Props> = ({ component: Component }) => {
-  const [videos, setVideos] = useState<any>(null);
+  const [videos, setVideos] = useState<YoutubeVideoList[]>();
 
   const mountedRef = useRef(true);
 
@@ -18,16 +21,14 @@ export const PlayListContainer: React.FC<Props> = ({ component: Component }) => 
   const getVideos = useCallback(async () => {
     if (!currentUser) return;
     try {
-      console.log(process.env.REACT_APP_YOUTUBE_API_KEY);
-
       const res = await fetch(
-        `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&id=UCN8VVKCpk37FUD6FK5XyqCQ&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+        `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&channelId=UCN8VVKCpk37FUD6FK5XyqCQ&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
       );
       const data = await res.json();
 
       if (!data || !data.items) return;
 
-      setVideos(data.items);
+      setVideos(data.items.slice(1));
     } catch (error) {
       console.log(error);
     }

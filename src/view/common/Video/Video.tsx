@@ -9,7 +9,6 @@ interface Props {
 }
 
 export const Video: React.FC<Props> = ({ src, headline }) => {
-
   const link = 'https://www.youtube.com/embed/';
 
   return (
