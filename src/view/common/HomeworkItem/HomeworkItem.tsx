@@ -1,5 +1,3 @@
-import { ifError } from "assert";
-
 import React from 'react';
 
 import * as S from './styled';

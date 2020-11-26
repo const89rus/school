@@ -2,7 +2,6 @@ import React from 'react';
 
 import { HomeworkItem } from 'view/common';
 
-
 import * as S from './styled';
 
 const homeworks = [

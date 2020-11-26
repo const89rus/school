@@ -26,7 +26,7 @@ export const CardAvatar = styled.div<Style>`
   z-index: 5;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 `;
 
 export const Img = styled.img<Style>`

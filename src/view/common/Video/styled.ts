@@ -11,6 +11,9 @@ export const Iframe = styled.div`
 `;
 
 export const HeadlineVideo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 3rem;
   background-color: ${(props) => props.theme.colors.white};
 `;
