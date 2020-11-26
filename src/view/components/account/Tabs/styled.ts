@@ -8,8 +8,11 @@ interface Style {
 
 export const AbsolutePosition = styled.div`
   position: absolute;
-  width: 100%;
+  width: 45vw;
   background-color: ${(props) => props.theme.colors.yellow};
+  @media (max-width: 1280px) {
+    width: 55vw;
+  }
 `;
 
 export const TabHeadersWrapper = styled.div`
@@ -48,17 +51,13 @@ export const Wrapper = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
-  width: 50.375rem;
+  width: 45vw;
   height: 39.9375rem;
   overflow-y: hidden;
   overflow-x: scroll;
   background-color: ${(props) => props.theme.colors.primary};
-  @media (max-width: 1850px) {
-    width: 45.375rem;
-  }
-  @media (max-width: 1330px) {
-    width: 40.3rem;
-    height: 31.95rem;
+  @media (max-width: 1280px) {
+    width: 55vw;
   }
 `;
 
