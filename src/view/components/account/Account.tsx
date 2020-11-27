@@ -30,7 +30,9 @@ export const Account: React.FC = () => {
       </S.MobileHomework>
       <S.MobileLesson id="lesson">
         <S.MobileTabsHeader>Записи уроков</S.MobileTabsHeader>
-        <PlayListContainer component={Lesson} />
+        <S.MobileLessonContainer>
+          <PlayListContainer component={Lesson} />
+        </S.MobileLessonContainer>
       </S.MobileLesson>
       <S.TabsWrapper>
         <Tabs />

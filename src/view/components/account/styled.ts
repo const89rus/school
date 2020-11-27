@@ -62,6 +62,12 @@ export const MobileHomework = styled.div`
   }
 `;
 
+export const MobileLessonContainer = styled.div`
+  margin: 0;
+  width: auto;
+  overflow-x: scroll;
+`;
+
 export const MobileLesson = styled.div`
   display: none;
   padding: 1rem 2.25rem;

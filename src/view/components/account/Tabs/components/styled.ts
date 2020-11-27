@@ -23,9 +23,12 @@ export const LessonWrapper = styled.div`
   @media ${device.mobileS} and (max-width: 1023px) {
     width: auto;
     height: auto;
-    overflow-x: scroll;
-    grid-row-gap: 2.5rem;
+    grid-gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: column;
     padding: 0;
+    justify-content: flex-start;
   }
 `;
 
