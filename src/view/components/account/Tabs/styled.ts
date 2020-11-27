@@ -65,3 +65,9 @@ export const Input = styled.div`
   margin: 5rem 0 0 1rem;
   position: absolute;
 `;
+
+export const WrapperForGrid = styled.div`
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+`;

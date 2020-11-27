@@ -4,16 +4,22 @@ import { device } from 'assets/variables/mediaSizes';
 
 export const LessonWrapper = styled.div`
   padding: 0 1rem;
+  margin-top: 5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10.625rem, 1fr));
-  grid-template-rows: repeat(2, minmax(8.1875rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12.625rem, 1fr));
+  grid-template-rows: repeat(2, minmax(14.1875rem, 1fr));
   grid-column-gap: 2.5rem;
+  grid-auto-flow: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 50.375rem;
-  height: 30.9375rem;
   font-size: 0.8125rem;
+  align-content: center;
+  @media (max-width: 1600px) {
+    margin-top: 4rem;
+    align-items: stretch;
+    grid-template-rows: repeat(2, minmax(18.1875rem, 1fr));
+  }
   @media ${device.mobileS} and (max-width: 1023px) {
     width: auto;
     height: auto;
@@ -24,18 +30,14 @@ export const LessonWrapper = styled.div`
 `;
 
 export const VideoWrapper = styled.div`
-  height: 4.625rem;
-  width: 12.1875rem;
-  @media ${device.mobileS} and (max-width: 1023px) {
-    width: auto;
-    height: auto;
-    align-self: start;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 15.5625rem;
+  align-self: start;
 `;
 
 export const HomeworkWrapper = styled.div`
   height: 18.25rem;
-  width: 58rem;
   padding: 1rem;
   margin-top: 8rem;
   @media ${device.mobileS} and (max-width: 1023px) {
@@ -48,14 +50,9 @@ export const HomeworkWrapper = styled.div`
 export const HomerworkItemsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(6.625rem, 1fr));
-  grid-template-rows: repeat(2, minmax(8.1875rem, 1fr));
+  grid-template-rows: 1fr 1fr;
   grid-gap: 1.875rem;
-`;
-
-export const YouTubeWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 14.5625rem;
+  grid-auto-flow: column;
 `;
 
 export const YouTubeTitle = styled.div`
@@ -67,6 +64,5 @@ export const YouTubeTitle = styled.div`
   margin: 0;
   padding: 0.5rem;
   height: auto;
-  width: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.21);
 `;

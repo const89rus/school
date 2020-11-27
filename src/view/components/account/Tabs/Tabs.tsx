@@ -35,11 +35,15 @@ export const Tabs: React.FC = () => {
             <S.Input>
               <Upload label="загрузить" />
             </S.Input>
-            <Homework />
+            <S.WrapperForGrid>
+              <Homework />
+            </S.WrapperForGrid>
           </TabContent>
 
           <TabContent value="lesson">
-            <PlayListContainer component={Lesson} />
+            <S.WrapperForGrid>
+              <PlayListContainer component={Lesson} />
+            </S.WrapperForGrid>
           </TabContent>
         </S.ContentWrapper>
       </Tab>
