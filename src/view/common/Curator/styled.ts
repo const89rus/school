@@ -43,15 +43,12 @@ export const SocialContainer = styled.div`
   justify-content: center;
   @media ${device.tablet} and (max-width: 1023px) {
     width: 2rem;
-    margin-top: 1rem;
   }
   @media ${device.mobileL} and (max-width: 768px) {
     width: 2.5rem;
-    margin-top: 1rem;
   }
   @media ${device.mobileS} and (max-width: 425px) {
     width: 3rem;
-    margin-top: 1rem;
   }
 `;
 
@@ -97,14 +94,17 @@ export const Info = styled.div`
   @media ${device.tablet} and (max-width: 1023px) {
     padding: 2rem 0;
     font-size: 1.4rem;
+    height: 10rem;
   }
   @media ${device.mobileL} and (max-width: 768px) {
     padding: 1.7rem 0;
     font-size: 2rem;
+    height: 12rem;
   }
   @media ${device.mobileS} and (max-width: 425px) {
     padding: 2rem 0;
     font-size: 2rem;
+    height: 15rem;
   }
 `;
 
