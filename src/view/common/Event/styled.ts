@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const EventWrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 2rem;
   margin: 3rem 0;
   color: ${(props) => props.theme.colors.white};
@@ -14,6 +15,9 @@ export const Date = styled.div`
   padding: 1.5rem 1rem;
   margin: 0 0.5rem;
   background-color: ${(props) => props.theme.colors.yellow};
+  @media (max-width: 1170px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Time = styled.div`
@@ -21,6 +25,9 @@ export const Time = styled.div`
   padding: 1.5rem;
   margin: 0 1.5rem;
   background-color: ${(props) => props.theme.colors.primary};
+  @media (max-width: 1170px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Event = styled.div`
@@ -41,4 +48,7 @@ export const Description = styled.h6`
   font-weight: 400;
   font-size: 1.5rem;
   margin: 0;
+  @media (max-width: 1170px) {
+    font-size: 1.2rem;
+  }
 `;

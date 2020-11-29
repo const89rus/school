@@ -70,12 +70,27 @@ export const MenuContainer = styled.div<IStyled>`
   background-color: ${(props) => props.bgColor};
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1280px) {
+    padding: 0 13rem;
+  }
+  @media (max-width: 700px) {
+    padding: 0 5rem;
+  }
 `;
 
 export const MenuItem = styled.div`
   color: ${(props) => props.theme.colors.white};
   font-size: 1.5rem;
   text-decoration: none;
+  @media (max-width: 900px) {
+    font-size: 1.2rem;
+  }
+  @media (max-width: 800px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 600px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export const MenuItemWrapper = styled(HashLink)`

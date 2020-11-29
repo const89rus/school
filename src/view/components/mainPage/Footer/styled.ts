@@ -10,6 +10,9 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   background-color: ${(props) => props.theme.colors.darkPrimary};
+  @media (max-width: 1280px) {
+    padding: 1rem 13rem 2rem;
+  }
 `;
 
 export const ContactWrapper = styled.div`

@@ -71,6 +71,7 @@ export const CuratorContent = styled.div`
 `;
 
 export const Name = styled.div`
+  margin-top: 0.5rem;
   text-align: center;
   font-size: 1.5rem;
   color: ${(props) => props.theme.colors.yellow};
@@ -92,6 +93,7 @@ export const Info = styled.div`
   justify-content: space-around;
   font-size: 1rem;
   height: 7rem;
+  margin-top: 0.5rem;
   @media ${device.tablet} and (max-width: 1023px) {
     padding: 2rem 0;
     font-size: 1.4rem;
@@ -110,6 +112,7 @@ export const Social = styled.div`
   display: flex;
   justify-content: space-between;
   width: 3.5rem;
+  margin-top: 0.2rem;
   @media ${device.tablet} and (max-width: 1023px) {
     width: 4.5rem;
   }

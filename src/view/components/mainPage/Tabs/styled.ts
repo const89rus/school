@@ -16,6 +16,9 @@ export const TabHeadersWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   padding: ${(props) => props.theme.root.contentPadding};
+  @media (max-width: 1599px) {
+    padding: 0 13rem;
+  }
 `;
 
 export const TabHeader = styled(TabHeaderUi)<Style>`
@@ -38,6 +41,9 @@ export const Text = styled.span`
   font-size: 1.5rem;
   bottom: 0.75rem;
   position: absolute;
+  @media (max-width: 1599px) {
+    bottom: 0rem;
+  }
 `;
 
 export const Wrapper = styled.div`
