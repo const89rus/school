@@ -17,6 +17,7 @@ export const Layout = styled.div`
   display: flex;
   padding: ${(props) => props.theme.root.contentPadding};
   justify-content: space-between;
+  z-index: 5;
   @media (max-width: 1280px) {
     padding: 0 13rem;
   }

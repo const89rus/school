@@ -12,7 +12,9 @@ export const Lesson: React.FC<LessonsComponent> = ({ videos }) => {
 
   const videosMap = videos.map((item) => (
     <S.VideoWrapper key={item.etag}>
-      <YouTube videoId={item.id.videoId} />
+      <S.VideoBorder>
+        <YouTube videoId={item.id.videoId} />
+      </S.VideoBorder>
       <S.YouTubeTitle>{item.snippet.title}</S.YouTubeTitle>
     </S.VideoWrapper>
   ));

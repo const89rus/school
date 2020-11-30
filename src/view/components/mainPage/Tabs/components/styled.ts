@@ -26,6 +26,12 @@ export const Wrapper = styled.div`
   @media (max-width: 1115px) {
     grid-gap: 1rem;
   }
+  @media (max-width: 600px) {
+    padding: 0 5rem;
+    padding-top: 10.625rem;
+    padding-bottom: 20rem;
+    grid-template-columns: 1fr;
+  }
   @media ${device.desktop} {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 0;

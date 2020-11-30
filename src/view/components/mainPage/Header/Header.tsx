@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Overlay } from 'view/common';
+
 import appolon from 'assets/img/appolon.png';
 
 import * as S from './styled';
@@ -7,6 +9,7 @@ import * as S from './styled';
 export const Header: React.FC = () => {
   return (
     <S.Wrapper id="#about">
+      <Overlay />
       <S.Img src={appolon} />
       <S.HeaderContent>
         <S.AboutHeader>Это только начало!</S.AboutHeader>

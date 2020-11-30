@@ -5,7 +5,7 @@ import * as S from './styled';
 export const Footer: React.FC = () => {
   return (
     <S.Wrapper>
-      <div>© 2020 Онлайн - курс «Это только начало»</div>
+      <S.Copyright>© 2020 Онлайн - курс «Это только начало»</S.Copyright>
       <S.ContactWrapper>
         <S.Question>Хотите связаться с нами?</S.Question>
         <S.Link href="tel:+79224630297">Телефон: +7(922)463-02-97</S.Link>

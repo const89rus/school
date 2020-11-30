@@ -20,20 +20,14 @@ export const MassMedia: React.FC = () => {
       <S.Wrapper>
         <S.Line>
           <S.VideoWrapper>
-            <Video
-              src="https://www.youtube.com/embed/89pc-pdR7Ps"
-              headline="Как делать КРАСИВЫЕ ФОТОГРАФИИ на любой фотоаппарат"
-            />
+            <Video src="89pc-pdR7Ps" headline="Как делать КРАСИВЫЕ ФОТОГРАФИИ на любой фотоаппарат" />
           </S.VideoWrapper>
           <Post headline="название статьи" post="сюда встраивается часть статьи"></Post>
         </S.Line>
         <S.Line>
           <Post headline="название статьи" post="сюда встраивается часть статьи"></Post>
           <S.VideoWrapper>
-            <Video
-              src="https://www.youtube.com/embed/89pc-pdR7Ps"
-              headline="Как делать КРАСИВЫЕ ФОТОГРАФИИ на любой фотоаппарат"
-            />
+            <Video src="89pc-pdR7Ps" headline="Как делать КРАСИВЫЕ ФОТОГРАФИИ на любой фотоаппарат" />
           </S.VideoWrapper>
         </S.Line>
       </S.Wrapper>

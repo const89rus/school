@@ -2,64 +2,68 @@ import React from 'react';
 
 import { HomeworkItem } from 'view/common';
 
+//import { ReactComponent as Document } from 'assets/svg/document.svg';
+import { ReactComponent as Doc } from 'assets/svg/Doc.svg';
+import { ReactComponent as Pdf } from 'assets/svg/Pdf.svg';
+
 import * as S from './styled';
 
 const homeworks = [
   {
     id: '1',
-    content: '',
+    content: <Doc />,
   },
   {
     id: '2',
-    content: '',
+    content: <Pdf />,
   },
   {
     id: '3',
-    content: '',
+    content: <Doc />,
   },
   {
     id: '4',
-    content: '',
+    content: <Pdf />,
   },
   {
     id: '5',
-    content: '',
+    content: <Doc />,
   },
   {
     id: '6',
-    content: '',
+    content: <Pdf />,
   },
   {
     id: '7',
-    content: '',
+    content: <Doc />,
   },
   {
     id: '8',
-    content: '',
+    content: <Pdf />,
   },
   {
     id: '9',
-    content: '',
+    content: <Doc />,
   },
   {
     id: '10',
-    content: '',
+    content: <Pdf />,
   },
   {
     id: '1',
-    content: '',
+    content: <Doc />,
   },
   {
     id: '12',
-    content: '',
+    content: <Pdf />,
   },
   {
     id: '13',
-    content: '',
+    content: <Doc />,
   },
   {
     id: '14',
-    content: '',
+    content: <Pdf />,
   },
 ];
 

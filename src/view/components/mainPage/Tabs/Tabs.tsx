@@ -18,17 +18,17 @@ export const Tabs: React.FC = () => {
         <S.AbsolutePosition>
           <S.TabHeadersWrapper>
             <S.TabHeader value="team" active={activeTab === 'team'}>
-              <TeamSvg />
+              <TeamSvg className="tabicon" />
               {activeTab === 'team' && <S.Text>команда</S.Text>}
             </S.TabHeader>
 
             <S.TabHeader value="teachers" active={activeTab === 'teachers'}>
-              <TeachersSvg />
+              <TeachersSvg className="tabicon" />
               {activeTab === 'teachers' && <S.Text>преподаватели</S.Text>}
             </S.TabHeader>
 
             <S.TabHeader value="media" active={activeTab === 'media'}>
-              <MediaSvg />
+              <MediaSvg className="tabicon" />
               {activeTab === 'media' && <S.Text>пресс-центр</S.Text>}
             </S.TabHeader>
           </S.TabHeadersWrapper>

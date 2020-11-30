@@ -13,6 +13,13 @@ export const Wrapper = styled.div`
   @media (max-width: 1280px) {
     padding: 1rem 13rem 2rem;
   }
+  @media (max-width: 1023px) {
+    height: 10rem;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+  }
 `;
 
 export const ContactWrapper = styled.div`
@@ -31,6 +38,9 @@ export const Link = styled.a`
   color: #fff;
   text-decoration: none;
   margin: 0.5rem 0;
+  @media (max-width: 425px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export const Button = styled(ButtonUi)`
@@ -39,4 +49,10 @@ export const Button = styled(ButtonUi)`
   width: 23.125rem;
   font-size: 2rem;
   border: none;
+`;
+
+export const Copyright = styled.div`
+  @media (max-width: 425px) {
+    font-size: 0.55rem;
+  }
 `;

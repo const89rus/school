@@ -12,10 +12,18 @@ export const Wrapper = styled.div`
   @media (max-width: 1280px) {
     padding: 2rem 13rem 10rem;
   }
+  @media (max-width: 700px) {
+    padding: 2rem 5rem 10rem;
+  }
 `;
 
 export const Img = styled.img`
   width: 24rem;
+  @media (max-width: 900px) {
+    position: absolute;
+    z-index: 0;
+    width: 30rem;
+  }
 `;
 
 export const HeaderContent = styled.div`
@@ -23,6 +31,9 @@ export const HeaderContent = styled.div`
   flex-direction: column;
   justify-content: space-around;
   font-size: 2rem;
+  @media (max-width: 900px) {
+    z-index: 1;
+  }
 `;
 
 export const AboutHeader = styled.h3`
@@ -34,6 +45,12 @@ export const AboutHeader = styled.h3`
   }
   @media (max-width: 1100px) {
     font-size: 3rem;
+  }
+  @media (max-width: 900px) {
+    font-size: 3.75rem;
+  }
+  @media (max-width: 425px) {
+    font-size: 2.6rem;
   }
 `;
 
@@ -47,6 +64,12 @@ export const AbaoutParagraph = styled.p`
   @media (max-width: 1100px) {
     font-size: 1.2rem;
   }
+  @media (max-width: 900px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 600px) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const ListHeader = styled.h4`
@@ -58,6 +81,12 @@ export const ListHeader = styled.h4`
   }
   @media (max-width: 1100px) {
     font-size: 1.5rem;
+  }
+  @media (max-width: 900px) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 425px) {
+    font-size: 2rem;
   }
 `;
 
@@ -79,5 +108,14 @@ export const ListItemSpan = styled.span`
   }
   @media (max-width: 1100px) {
     font-size: 1.2rem;
+  }
+  @media (max-width: 900px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 600px) {
+    font-size: 2.3rem;
+  }
+  @media (max-width: 425px) {
+    font-size: 1.8rem;
   }
 `;

@@ -46,6 +46,7 @@ export const HomeworkWrapper = styled.div`
   @media ${device.mobileS} and (max-width: 1023px) {
     margin: 0;
     width: auto;
+    height: auto;
     overflow-x: scroll;
   }
 `;
@@ -56,6 +57,9 @@ export const HomerworkItemsWrapper = styled.div`
   grid-template-rows: 1fr 1fr;
   grid-gap: 1.875rem;
   grid-auto-flow: column;
+  @media (max-width: 1023px) {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 `;
 
 export const YouTubeTitle = styled.div`
@@ -68,4 +72,11 @@ export const YouTubeTitle = styled.div`
   padding: 0.5rem;
   height: auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.21);
+`;
+
+export const VideoBorder = styled.div`
+  border: 5px solid ${(props) => props.theme.colors.yellow};
+  @media (max-width: 1023px) {
+    border: 2.5px solid ${(props) => props.theme.colors.primary};
+  }
 `;

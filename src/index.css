@@ -37,16 +37,15 @@ a {
 iframe {
   width: 100%;
   height: 100%;
-  border: 5px solid #F6AE2D;
   box-sizing: border-box;
   vertical-align: bottom;
 } 
 
-@media screen and (max-width: 1023px) {
+/*@media screen and (max-width: 1023px) {
   iframe {
     border: 2.5px solid #1794A5
   }
-}
+} */
 
 ::-webkit-scrollbar {
   width: 15px;
@@ -71,4 +70,11 @@ iframe {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #FFFFFF;
+}
+
+@media screen and (max-width: 600px) {
+  .tabicon {
+  width: 7rem;
+  height: 7rem;
+  }
 }

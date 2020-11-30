@@ -55,6 +55,9 @@ export const CardContent = styled.div<Style>`
   @media ${device.desktop} {
     width: 20rem;
   }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const Name = styled.span<Style>`

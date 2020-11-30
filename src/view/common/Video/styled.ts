@@ -9,6 +9,8 @@ export const Iframe = styled.div`
   height: 16.5rem;
   width: 100%;
   display: flex;
+  border: 5px solid ${(props) => props.theme.colors.yellow};
+  box-sizing: border-box;
 `;
 
 export const HeadlineVideo = styled.div`
@@ -17,4 +19,7 @@ export const HeadlineVideo = styled.div`
   justify-content: center;
   height: 3rem;
   background-color: ${(props) => props.theme.colors.white};
+  @media (max-width: 950px) {
+    font-size: 0.8rem;
+  }
 `;

@@ -11,6 +11,7 @@ export const Topic = styled.div`
   align-items: center;
   background-color: ${(props) => props.theme.colors.white};
   height: 3rem;
+  padding-left: 0.5rem;
 `;
 
 export const Fragment = styled.div`
