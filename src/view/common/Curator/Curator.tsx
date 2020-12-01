@@ -5,6 +5,7 @@ import { ReactComponent as Vk } from 'assets/svg/vk.svg';
 import { ReactComponent as Insta } from 'assets/svg/insta.svg';
 
 import * as S from './styled';
+import firebase from 'firebase';
 
 interface Props {
   name: string;
@@ -48,7 +49,9 @@ export const Curator: React.FC<Props> = ({ name, img, alt = 'avatar', age, city,
       </S.CuratorContent>
       <S.BottomInfo>
         <S.Edit href="/">редактировать профиль</S.Edit>
-        <S.LogOut href="/">выйти</S.LogOut>
+        <S.LogOut href="/" onClick={() => firebase.auth().signOut()}>
+          выйти
+        </S.LogOut>
       </S.BottomInfo>
     </S.CuratorWrapper>
   );
