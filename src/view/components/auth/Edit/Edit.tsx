@@ -10,7 +10,7 @@ import { Alert } from 'view/common';
 import * as S from './styled';
 import firebase from 'firebase';
 
-export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage, profile }) => {
+export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage }) => {
   const { register, formState, handleSubmit, errors } = useForm<FormFields>({
     mode: 'onBlur',
     defaultValues: {
