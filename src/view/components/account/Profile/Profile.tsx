@@ -13,13 +13,13 @@ export const Profile: React.FC<any> = ({ profile }) => {
   return (
     <Curator
       img={Img1}
-      name="Давлетшина Марина Отчество"
-      age="25"
-      city="г. Ноябрьск"
-      mail="marinathebest@gmail.ru"
-      uneversity="МГУ"
-      vk="#"
-      insta="#"
+      name={profile.name}
+      age={profile.age}
+      city={profile.city}
+      mail={profile.email}
+      uneversity={profile.study}
+      vk={profile.social}
+      insta={profile.social}
     />
   );
 };
