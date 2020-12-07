@@ -1,16 +1,18 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useHistory } from 'react-router-dom';
 import { isEmpty } from 'lodash';
 
-import { IEditComponent, FormFields } from 'domain/auth/interfaces';
-import { isValidPassword, isValidEmail } from 'domain/app/utils/validate';
-
-import { Alert } from 'view/common';
-
-import * as S from './styled';
 import firebase from 'firebase';
 
-export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage }) => {
+import { FormFields } from 'domain/auth/interfaces';
+import { isValidPassword, isValidEmail } from 'domain/app/utils/validate';
+
+import { Alert, Spinner } from 'view/common';
+
+import * as S from './styled';
+
+export const Edit: React.FC<any> = ({ profile, errorsMessage }) => {
   const { register, formState, handleSubmit, errors } = useForm<FormFields>({
     mode: 'onBlur',
     defaultValues: {
@@ -24,6 +26,8 @@ export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage }) => {
       repeat: '',
     },
   });
+
+  console.log(profile);
 
   const errorsAlert = useCallback(() => {
     if (isEmpty(errors)) return null;
@@ -52,8 +56,33 @@ export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage }) => {
     window.location.assign('/');
   };
 
-  const items = firebase.auth().currentUser;
-  console.log(items);
+  const history = useHistory();
+  const userUpdate = useCallback(
+    async (fields: FormFields) => {
+      try {
+        const { password, repeat, ...rest } = fields;
+
+        if (password !== repeat) {
+          alert('Пароли не совпадают');
+        }
+
+        const user = firebase.auth().currentUser;
+
+        if (user) {
+          await firebase
+            .database()
+            .ref(`users/${user.uid}`)
+            .set({
+              ...rest,
+            });
+        }
+        history.push('/');
+      } catch (error) {
+        alert('Извините, произошла техническая ошибка. Попробуйте позже');
+      }
+    },
+    [history]
+  );
 
   return (
     <S.Wrapper>
@@ -86,7 +115,7 @@ export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage }) => {
         <S.Input
           type="password"
           name="password"
-          placeholder="Придумайте пароль"
+          placeholder="Введите новый пароль"
           autoComplete="off"
           ref={register({
             required: true,
@@ -114,7 +143,7 @@ export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage }) => {
         <S.Button appearance="primary" onClick={backButton}>
           Назад
         </S.Button>
-        <S.Button appearance="primary" onClick={handleSubmit(onEdit)} disabled={!formState.isValid}>
+        <S.Button appearance="primary" onClick={handleSubmit(userUpdate)} disabled={!formState.isValid}>
           Изменить профиль
         </S.Button>
       </S.ButtonWrapper>

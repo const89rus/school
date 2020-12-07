@@ -34,6 +34,9 @@ export const Button = styled(ButtonUi)`
     width: 100%;
     height: 5.2425rem;
   }
+  &:last-child {
+    border-bottom: 3px dashed ${colors.primary};
+  }
 `;
 
 export const Input = styled.input`
