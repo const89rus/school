@@ -1,7 +1,8 @@
+import { UserProfile } from 'domain/account/interfaces';
 export interface IEditComponent {
   errorsMessage?: string;
-  profile: any;
-  onEdit: (fields: FormFields) => Promise<void>;
+  profile: UserProfile;
+  userUpdate: (fields: FormFields) => Promise<void>;
 }
 
 export interface FormFields {

@@ -1,31 +1,29 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { isEmpty } from 'lodash';
 
-import { IEditComponent, FormFields } from 'domain/auth/interfaces';
+import { FormFields, IEditComponent } from 'domain/auth/interfaces';
 import { isValidPassword, isValidEmail } from 'domain/app/utils/validate';
 
-import { Alert } from 'view/common';
+import { Alert, Spinner } from 'view/common';
 
 import * as S from './styled';
 
-export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage, profile }) => {
-  const { register, formState, handleSubmit, errors } = useForm<FormFields>({
+export const Edit: React.FC<IEditComponent> = ({ userUpdate, errorsMessage, profile }) => {
+  const { push } = useHistory();
+
+  const { register, formState, handleSubmit, errors, setValue } = useForm<FormFields>({
     mode: 'onBlur',
     defaultValues: {
-      name: '',
-      age: '',
-      city: '',
-      study: '',
-      email: '',
-      social: '',
-      password: '',
-      repeat: '',
+      name: profile.name,
+      age: profile.age,
+      city: profile.city,
+      study: profile.study,
+      email: profile.email,
+      social: profile.social,
     },
   });
-
-  const { push } = useHistory();
 
   const errorsAlert = useCallback(() => {
     if (isEmpty(errors)) return null;
@@ -53,8 +51,6 @@ export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage, profile 
   const backButton = useCallback(() => {
     push('/');
   }, [push]);
-
-  console.log(profile);
 
   return (
     <S.Wrapper>
@@ -84,10 +80,10 @@ export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage, profile 
           autoComplete="off"
           ref={register({ required: true })}
         />
-        <S.Input
+        {/* <S.Input
           type="password"
           name="password"
-          placeholder="Придумайте пароль"
+          placeholder="Введите новый пароль"
           autoComplete="off"
           ref={register({
             required: true,
@@ -109,13 +105,13 @@ export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage, profile 
               symbols: isValidPassword,
             },
           })}
-        />
+        /> */}
       </S.FormWrapper>
       <S.ButtonWrapper>
         <S.Button appearance="primary" onClick={backButton}>
           Назад
         </S.Button>
-        <S.Button appearance="primary" onClick={handleSubmit(onEdit)} disabled={!formState.isValid}>
+        <S.Button appearance="primary" onClick={handleSubmit(userUpdate)} disabled={!formState.isValid}>
           Изменить профиль
         </S.Button>
       </S.ButtonWrapper>
