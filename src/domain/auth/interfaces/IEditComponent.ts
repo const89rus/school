@@ -1,5 +1,6 @@
 export interface IEditComponent {
   errorsMessage?: string;
+  profile: any;
   onEdit: (fields: FormFields) => Promise<void>;
 }
 

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { fb } from 'data/firebase/firebase';
+
 import { ReactComponent as Vk } from 'assets/svg/vk.svg';
 import { ReactComponent as Insta } from 'assets/svg/insta.svg';
 
 import * as S from './styled';
-import firebase from 'firebase';
 
 interface Props {
   name: string;
@@ -49,7 +50,7 @@ export const Curator: React.FC<Props> = ({ name, img, alt = 'avatar', age, city,
       </S.CuratorContent>
       <S.BottomInfo>
         <S.Edit href="/edit">редактировать профиль</S.Edit>
-        <S.LogOut href="/" onClick={() => firebase.auth().signOut()}>
+        <S.LogOut href="/" onClick={() => fb.auth().signOut()}>
           выйти
         </S.LogOut>
       </S.BottomInfo>

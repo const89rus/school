@@ -1,7 +1,10 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useContext, useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
+import { UserProfile } from 'domain/account/interfaces';
+
 import { fb } from 'data/firebase/firebase';
+import { AuthContext } from 'data/auth/AuthContext';
 
 import { IEditComponent, FormFields } from '../interfaces';
 
@@ -12,6 +15,20 @@ interface Props {
 export const EditContainer: React.FC<Props> = ({ component: Component }) => {
   const history = useHistory();
   const [errors, setErrors] = useState<string>();
+  const [profile, setProfile] = useState<UserProfile | null>(null);
+
+  const { currentUser } = useContext(AuthContext);
+
+  useEffect(() => {
+    fb.database()
+      .ref(`users/${currentUser?.uid}`)
+      .once('value', (snapshot) => {
+        const values: UserProfile = snapshot.val();
+        if (!values) return;
+
+        setProfile(values);
+      });
+  }, []);
 
   const onEdit = useCallback(
     async (fields: FormFields) => {
@@ -48,5 +65,5 @@ export const EditContainer: React.FC<Props> = ({ component: Component }) => {
     [history]
   );
 
-  return <Component onEdit={onEdit} errorsMessage={errors} />;
+  return <Component onEdit={onEdit} errorsMessage={errors} profile={profile} />;
 };

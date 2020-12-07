@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { isEmpty } from 'lodash';
 
@@ -8,9 +9,8 @@ import { isValidPassword, isValidEmail } from 'domain/app/utils/validate';
 import { Alert } from 'view/common';
 
 import * as S from './styled';
-import firebase from 'firebase';
 
-export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage }) => {
+export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage, profile }) => {
   const { register, formState, handleSubmit, errors } = useForm<FormFields>({
     mode: 'onBlur',
     defaultValues: {
@@ -24,6 +24,8 @@ export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage }) => {
       repeat: '',
     },
   });
+
+  const { push } = useHistory();
 
   const errorsAlert = useCallback(() => {
     if (isEmpty(errors)) return null;
@@ -48,12 +50,11 @@ export const Edit: React.FC<IEditComponent> = ({ onEdit, errorsMessage }) => {
     );
   }, [errors, errorsMessage]);
 
-  const backButton = () => {
-    window.location.assign('/');
-  };
+  const backButton = useCallback(() => {
+    push('/');
+  }, [push]);
 
-  const items = firebase.auth().currentUser;
-  console.log(items);
+  console.log(profile);
 
   return (
     <S.Wrapper>
