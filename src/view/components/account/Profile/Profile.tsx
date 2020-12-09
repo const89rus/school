@@ -5,8 +5,6 @@ import { Curator, Spinner } from 'view/common';
 import Avatar from 'assets/img/avatar.png';
 
 export const Profile: React.FC<any> = ({ profile }) => {
-  console.log(profile);
-
   // Тут можешь придумать спиннер
   if (!profile) return <Spinner />;
 

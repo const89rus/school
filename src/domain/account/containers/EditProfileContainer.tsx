@@ -28,8 +28,6 @@ export const EditProfileContainer: React.FC<Props> = ({ component: Component }) 
         const values: UserProfile = snapshot.val();
         if (!values) return;
 
-        console.log(values);
-
         setProfile(values);
       });
   }, [currentUser?.uid]);
