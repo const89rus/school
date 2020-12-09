@@ -59,6 +59,27 @@ export const ContentWrapper = styled.div`
   @media (max-width: 1280px) {
     width: 55vw;
   }
+  &::-webkit-scrollbar {
+    display: block;
+    width: 15px;
+    background-color: ${(props) => props.theme.colors.white};
+  }
+  @media screen and (max-width: 1023px) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &::-webkit-scrollbar:hover {
+    background-color: ${(props) => props.theme.colors.darkPrimary};
+  }
+  &::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 13px;
+    background-color: ${(props) => props.theme.colors.darkPrimary};
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: ${(props) => props.theme.colors.white};
+  }
 `;
 
 export const Input = styled.div`
