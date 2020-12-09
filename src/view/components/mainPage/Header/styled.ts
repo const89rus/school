@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  position: relative;
   background-color: ${(props) => props.theme.colors.yellow};
   display: flex;
   justify-content: space-between;
@@ -18,6 +19,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Img = styled.img`
+  position: relative;
   width: 24rem;
   @media (max-width: 900px) {
     position: absolute;

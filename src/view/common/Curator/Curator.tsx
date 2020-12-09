@@ -49,10 +49,10 @@ export const Curator: React.FC<Props> = ({ name, img, alt = 'avatar', age, city,
         </S.Info>
       </S.CuratorContent>
       <S.BottomInfo>
-        <S.Edit href="/edit">редактировать профиль</S.Edit>
-        <S.LogOut href="/" onClick={() => fb.auth().signOut()}>
+        <S.Link href="/edit">редактировать профиль</S.Link>
+        <S.Link href="/" onClick={() => fb.auth().signOut()}>
           выйти
-        </S.LogOut>
+        </S.Link>
       </S.BottomInfo>
     </S.CuratorWrapper>
   );

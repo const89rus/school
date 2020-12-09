@@ -8,6 +8,7 @@ import { fb } from 'data/firebase/firebase';
 import { AuthContext } from 'data/auth/AuthContext';
 
 import { IEditComponent, FormFields } from '../../auth/interfaces';
+import { Spinner } from 'view/common';
 
 interface Props {
   component: React.ElementType<IEditComponent>;
@@ -53,7 +54,7 @@ export const EditProfileContainer: React.FC<Props> = ({ component: Component }) 
     [currentUser, push]
   );
 
-  if (isEmpty(profile)) return <div>Тут Спинер поставь</div>;
+  if (isEmpty(profile)) return <Spinner />;
 
   return <Component userUpdate={userUpdate} errorsMessage={errors} profile={profile} />;
 };

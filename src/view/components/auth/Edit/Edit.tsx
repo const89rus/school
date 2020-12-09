@@ -1,12 +1,12 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { isEmpty } from 'lodash';
 
 import { FormFields, IEditComponent } from 'domain/auth/interfaces';
-import { isValidPassword, isValidEmail } from 'domain/app/utils/validate';
+import { isValidEmail } from 'domain/app/utils/validate';
 
-import { Alert, Spinner } from 'view/common';
+import { Alert } from 'view/common';
 
 import * as S from './styled';
 

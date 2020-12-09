@@ -29,6 +29,7 @@ export const CuratorAvatar = styled.div`
 `;
 
 export const Img = styled.img`
+  position: relative;
   width: 100%;
   @media ${device.mobileL} and (max-width: 1023px) {
     width: 70%;
@@ -145,10 +146,6 @@ export const BottomInfo = styled.div`
   }
 `;
 
-export const Edit = styled.a`
-  width: auto;
-`;
-
-export const LogOut = styled.a`
+export const Link = styled.a`
   width: auto;
 `;

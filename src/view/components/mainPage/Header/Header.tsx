@@ -1,16 +1,22 @@
 import React from 'react';
+import { Parallax } from 'react-scroll-parallax';
 
 import { Overlay } from 'view/common';
+import { ParallaxCache } from 'view/common';
 
 import appolon from 'assets/img/appolon.png';
 
 import * as S from './styled';
 
 export const Header: React.FC = () => {
+  const newLocal = [0, 50];
   return (
     <S.Wrapper id="#about">
       <Overlay />
-      <S.Img src={appolon} />
+      <Parallax y={newLocal}>
+        <ParallaxCache />
+        <S.Img src={appolon} />
+      </Parallax>
       <S.HeaderContent>
         <S.AboutHeader>Это только начало!</S.AboutHeader>
         <S.AbaoutParagraph>

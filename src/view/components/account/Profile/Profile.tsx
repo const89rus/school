@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Curator, Spinner } from 'view/common';
 
-import Img1 from 'assets/img/Marina_Davletshina.jpg';
+import Avatar from 'assets/img/avatar.png';
 
 export const Profile: React.FC<any> = ({ profile }) => {
   console.log(profile);
@@ -12,7 +12,7 @@ export const Profile: React.FC<any> = ({ profile }) => {
 
   return (
     <Curator
-      img={Img1}
+      img={Avatar}
       name={profile.name}
       age={profile.age}
       city={profile.city}
