@@ -6,8 +6,6 @@ import { LessonsComponent } from 'domain/account/interfaces/LessonsComponent';
 import * as S from './styled';
 
 export const Lesson: React.FC<LessonsComponent> = ({ videos }) => {
-  console.log(videos);
-
   if (!videos) return null;
 
   const videosMap = videos.map((item) => (
