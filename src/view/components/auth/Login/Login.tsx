@@ -34,7 +34,7 @@ export const Login: React.FC<ILoginComponent> = ({ onLogin, errorsMessage }) => 
         </S.Button>
       </S.FormWrapper>
 
-      <S.Link href="/">забыли пароль?</S.Link>
+      <S.Link href="/reset-password">забыли пароль?</S.Link>
 
       <S.Question>Еще нет аккаунта?</S.Question>
       <Link to="/register">

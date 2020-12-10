@@ -1,4 +1,5 @@
 import React from 'react';
+import { Parallax } from 'react-scroll-parallax';
 
 import * as S from './styled';
 
@@ -14,7 +15,9 @@ export const Section: React.FC<Props> = ({ variant, headerVariant, contentVarian
   return (
     <S.SectionWrapper variant={variant} id={id}>
       <S.SectionHeader headerVariant={headerVariant}>{header}</S.SectionHeader>
-      <S.SectionContent contentVariant={contentVariant}>{children}</S.SectionContent>
+      <S.SectionContent contentVariant={contentVariant}>
+        <Parallax y={[-15, 20]}>{children}</Parallax>
+      </S.SectionContent>
     </S.SectionWrapper>
   );
 };

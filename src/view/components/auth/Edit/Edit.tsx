@@ -80,32 +80,6 @@ export const Edit: React.FC<IEditComponent> = ({ userUpdate, errorsMessage, prof
           autoComplete="off"
           ref={register({ required: true })}
         />
-        {/* <S.Input
-          type="password"
-          name="password"
-          placeholder="Введите новый пароль"
-          autoComplete="off"
-          ref={register({
-            required: true,
-            minLength: { value: 5, message: 'Минимальная длина пароля 5 символов.' },
-            validate: {
-              symbols: isValidPassword,
-            },
-          })}
-        />
-        <S.Input
-          type="password"
-          name="repeat"
-          placeholder="Повторите пароль"
-          autoComplete="off"
-          ref={register({
-            required: true,
-            minLength: { value: 5, message: 'Минимальная длина пароля 5 символов.' },
-            validate: {
-              symbols: isValidPassword,
-            },
-          })}
-        /> */}
       </S.FormWrapper>
       <S.ButtonWrapper>
         <S.Button appearance="primary" onClick={backButton}>

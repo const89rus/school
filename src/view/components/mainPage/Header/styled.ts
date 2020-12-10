@@ -121,3 +121,19 @@ export const ListItemSpan = styled.span`
     font-size: 1.8rem;
   }
 `;
+
+export const LargeParallax = styled.div`
+  display: none;
+  position: relative;
+  @media (max-width: 1801px) {
+    display: block;
+  }
+`;
+
+export const XLargeParallax = styled.div`
+  display: none;
+  position: relative;
+  @media (min-width: 1801px) {
+    display: block;
+  }
+`;

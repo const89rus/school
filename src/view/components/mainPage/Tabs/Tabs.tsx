@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Parallax } from 'react-scroll-parallax';
 
 import { Team, Teachers, Media } from './components';
-import { Tab, TabContent } from 'view/common';
+import { Tab, TabContent, ParallaxCache } from 'view/common';
 
 import { ReactComponent as TeamSvg } from 'assets/svg/Shape.svg';
 import { ReactComponent as TeachersSvg } from 'assets/svg/Vector.svg';
@@ -35,15 +36,24 @@ export const Tabs: React.FC = () => {
         </S.AbsolutePosition>
 
         <TabContent value="team">
-          <Team />
+          <Parallax y={[-5, 20]}>
+            <ParallaxCache />
+            <Team />
+          </Parallax>
         </TabContent>
 
         <TabContent value="teachers">
-          <Teachers />
+          <Parallax y={[-5, 15]}>
+            <ParallaxCache />
+            <Teachers />
+          </Parallax>
         </TabContent>
 
         <TabContent value="media">
-          <Media />
+          <Parallax y={[-5, 20]}>
+            <ParallaxCache />
+            <Media />
+          </Parallax>
         </TabContent>
       </Tab>
     </S.Wrapper>

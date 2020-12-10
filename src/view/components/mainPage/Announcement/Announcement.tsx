@@ -1,7 +1,7 @@
 import React from 'react';
+import { Parallax } from 'react-scroll-parallax';
 
-import { Event } from 'view/common';
-import { Section } from 'view/common';
+import { Event, Section, ParallaxCache } from 'view/common';
 
 import { colors } from 'assets/variables/colors';
 
@@ -14,6 +14,7 @@ const events = [
     time: '15:00',
     heading: 'Название занятия',
     description: 'Маленькое Описание занятия, если потребуется',
+    y: [-20, 0],
   },
   {
     id: '2',
@@ -21,6 +22,7 @@ const events = [
     time: '15:00',
     heading: 'Название занятия',
     description: 'Маленькое Описание занятия, если потребуется',
+    y: [20, 0],
   },
 ];
 
@@ -35,13 +37,10 @@ export const Announcement: React.FC = () => {
     >
       <S.Wrapper>
         {events.map((item) => (
-          <Event
-            key={item.id}
-            date={item.date}
-            time={item.time}
-            heading={item.heading}
-            description={item.description}
-          />
+          <Parallax y={item.y} key={item.id}>
+            <ParallaxCache />
+            <Event date={item.date} time={item.time} heading={item.heading} description={item.description} />
+          </Parallax>
         ))}
       </S.Wrapper>
     </Section>
