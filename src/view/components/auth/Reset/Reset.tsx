@@ -35,6 +35,7 @@ export const Reset: React.FC<IResetComponent> = ({ onReset }) => {
       <S.FormWrapper>
         {errorsAlert()}
         <S.Input
+          id="email"
           type="email"
           name="email"
           placeholder="Введите email"
