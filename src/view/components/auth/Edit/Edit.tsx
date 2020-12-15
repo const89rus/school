@@ -3,10 +3,11 @@ import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { isEmpty } from 'lodash';
 
+import { VerifyEmailContainer } from 'domain/auth/containers';
 import { FormFields, IEditComponent } from 'domain/auth/interfaces';
 import { isValidEmail } from 'domain/app/utils/validate';
 
-import { Alert } from 'view/common';
+import { Alert, Verify } from 'view/common';
 
 import * as S from './styled';
 
@@ -82,6 +83,7 @@ export const Edit: React.FC<IEditComponent> = ({ userUpdate, errorsMessage, prof
         />
       </S.FormWrapper>
       <S.ButtonWrapper>
+        <VerifyEmailContainer component={Verify} />
         <S.Button appearance="primary" onClick={backButton}>
           Назад
         </S.Button>

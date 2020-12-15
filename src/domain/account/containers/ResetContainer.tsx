@@ -19,6 +19,7 @@ export const ResetContainer: React.FC<Props> = ({ component: Component }) => {
       await auth
         .sendPasswordResetEmail(email)
         .then(function () {
+          console.log();
           alert('Пожалуйста, проверьте почту');
           history.push('/');
         })
