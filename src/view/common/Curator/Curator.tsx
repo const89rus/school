@@ -35,16 +35,16 @@ export const Curator: React.FC<Props> = ({ name, img, alt = 'avatar', age, city,
           <span>{mail}</span>
           <span>{uneversity}</span>
           <S.Social>
-            <Link to={insta}>
+            <S.Link href={insta}>
               <S.SocialContainer>
                 <Insta />
               </S.SocialContainer>
-            </Link>
-            <Link to={vk}>
+            </S.Link>
+            <S.Link href={vk}>
               <S.SocialContainer>
                 <Vk />
               </S.SocialContainer>
-            </Link>
+            </S.Link>
           </S.Social>
         </S.Info>
       </S.CuratorContent>

@@ -7,8 +7,9 @@ import Img2 from 'assets/img/olga_sytnik.jpg';
 import Img3 from 'assets/img/olga_mejina.jpg';
 import Img4 from 'assets/img/olesya_grigoreva.jpg';
 import Img5 from 'assets/img/azamat_karimov.jpg';
-import Img6 from 'assets/img/julia_tihonova.jpg';
+import Img6 from 'assets/img/anton_timofeev.jpg';
 import Img7 from 'assets/img/olga_petrova.jpg';
+import Img8 from 'assets/img/valerya_popova.jpg';
 
 import * as S from './styled';
 
@@ -47,8 +48,8 @@ const cards = [
   },
   {
     id: '6',
-    name: 'Юлия Тихонова',
-    position: 'Телеведущая, блогер, журналист «Сургут 24»',
+    name: 'Антон Тимофеев',
+    position: 'Ведущий «Радио Ноябрьск», шоумен',
     img: Img6,
   },
   {
@@ -56,6 +57,12 @@ const cards = [
     name: 'Ольга Петрова',
     position: 'Журналист, телеведущая, редактор «Вести. Севастополь»',
     img: Img7,
+  },
+  {
+    id: '8',
+    name: 'Валерия Попова',
+    position: 'Продюсер "Первого канала", блогер ютуб-канала "Официальный канал Андрея Караулова"',
+    img: Img8,
   },
 ];
 

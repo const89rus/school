@@ -22,6 +22,9 @@ export const Layout: React.FC<Props> = ({ children, isAuthed }) => {
     return colors.darkPrimary;
   }, [isLoginPage, isRegisterPage]);
 
+  const vk = 'https://vk.com/startnow89';
+  const insta = 'https://www.instagram.com/start_now89/';
+
   return (
     <Fragment>
       <S.Layout>
@@ -37,10 +40,14 @@ export const Layout: React.FC<Props> = ({ children, isAuthed }) => {
           </Link>
 
           <S.SocialContainer>
-            <Vk />
+            <S.Link href={vk}>
+              <Vk className="social" />
+            </S.Link>
           </S.SocialContainer>
           <S.SocialContainer>
-            <Insta />
+            <S.Link href={insta}>
+              <Insta className="social" />
+            </S.Link>
           </S.SocialContainer>
         </S.Wrapper>
       </S.Layout>

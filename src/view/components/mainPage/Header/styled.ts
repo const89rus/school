@@ -34,7 +34,7 @@ export const HeaderContent = styled.div`
   justify-content: space-around;
   font-size: 2rem;
   @media (max-width: 900px) {
-    z-index: 1;
+    z-index: 2;
   }
 `;
 

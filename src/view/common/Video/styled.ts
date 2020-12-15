@@ -16,7 +16,8 @@ export const Iframe = styled.div`
 export const HeadlineVideo = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 0.5rem;
   height: 3rem;
   background-color: ${(props) => props.theme.colors.white};
   @media (max-width: 950px) {

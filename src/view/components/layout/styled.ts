@@ -104,3 +104,9 @@ export const MenuItemWrapper = styled(HashLink)`
     background-color: ${(props) => props.theme.colors.yellow};
   }
 `;
+
+export const Link = styled.a`
+  width: auto;
+  height: auto;
+  text-align: center;
+`;

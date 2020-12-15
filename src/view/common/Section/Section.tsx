@@ -16,7 +16,7 @@ export const Section: React.FC<Props> = ({ variant, headerVariant, contentVarian
     <S.SectionWrapper variant={variant} id={id}>
       <S.SectionHeader headerVariant={headerVariant}>{header}</S.SectionHeader>
       <S.SectionContent contentVariant={contentVariant}>
-        <Parallax y={[-15, 20]}>{children}</Parallax>
+        <Parallax y={[-5, 5]}>{children}</Parallax>
       </S.SectionContent>
     </S.SectionWrapper>
   );

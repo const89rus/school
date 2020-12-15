@@ -13,12 +13,31 @@ export const Topic = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   height: 3rem;
   padding-left: 0.5rem;
+  overflow: hidden;
+  @media (max-width: 425px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export const Fragment = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: hidden;
   background-color: ${(props) => props.theme.colors.yellow};
-  height: 16.5rem;
+  height: 15.5rem;
+  padding: 0.5rem;
+`;
+
+export const Link = styled.a`
+  position: absolute;
+  width: 54%;
+  bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: ${(props) => props.theme.colors.yellowHalf};
+  color: ${(props) => props.theme.colors.white};
+  &:hover {
+    color: ${(props) => props.theme.colors.black};
+  }
 `;

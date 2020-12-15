@@ -23,8 +23,9 @@ export const Header: React.FC = () => {
           <S.Img src={appolon} />
         </Parallax>
       </S.LargeParallax>
-      <Parallax y={[15, -15]}>
-        <S.HeaderContent>
+
+      <S.HeaderContent>
+        <Parallax y={[15, -15]}>
           <S.AboutHeader>Это только начало!</S.AboutHeader>
           <S.AbaoutParagraph>
             Бесплатный онлайн-курс для школьников, которые планируют поступление в вузы по направлению «Журналистика»
@@ -48,8 +49,8 @@ export const Header: React.FC = () => {
               <S.ListItemSpan>знакомство с новыми людьми.</S.ListItemSpan>
             </S.ListItem>
           </S.List>
-        </S.HeaderContent>
-      </Parallax>
+        </Parallax>
+      </S.HeaderContent>
     </S.Wrapper>
   );
 };

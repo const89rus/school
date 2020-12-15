@@ -57,3 +57,10 @@ iframe {
   height: 7rem;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .social {
+    width: 75%;
+    vertical-align: bottom;
+  }
+}

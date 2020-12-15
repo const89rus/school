@@ -14,6 +14,7 @@ declare module 'styled-components' {
       yellow: string;
       black: string;
       primaryHalf: string;
+      yellowHalf: string;
     };
   }
 }

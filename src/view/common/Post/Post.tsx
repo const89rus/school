@@ -4,14 +4,17 @@ import * as S from './styled';
 
 interface Props {
   headline: string;
-  post: string;
+  link: string;
 }
 
-export const Post: React.FC<Props> = ({ post, headline }) => {
+export const Post: React.FC<Props> = ({ headline, link, children }) => {
   return (
     <S.PostWrapper>
       <S.Topic>{headline}</S.Topic>
-      <S.Fragment>{post}</S.Fragment>
+      <S.Fragment>
+        {children}
+        <S.Link href={link}>Продлолжение в источнике...</S.Link>
+      </S.Fragment>
     </S.PostWrapper>
   );
 };

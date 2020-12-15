@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const OverlayWrapper = styled.div`
   width: 100%;
-  height: 50%;
+  height: 100%;
   position: absolute;
   left: 0;
-  top: 15.313rem;
+  top: 0;
   background-color: rgba(246, 174, 45, 0.65);
   display: none;
   z-index: 1;

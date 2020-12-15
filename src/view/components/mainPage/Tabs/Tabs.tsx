@@ -36,21 +36,21 @@ export const Tabs: React.FC = () => {
         </S.AbsolutePosition>
 
         <TabContent value="team">
-          <Parallax y={[0, 20]}>
+          <Parallax y={[0, 15]}>
             <ParallaxCache />
             <Team />
           </Parallax>
         </TabContent>
 
         <TabContent value="teachers">
-          <Parallax y={[0, 15]}>
+          <Parallax y={[0, 10]}>
             <ParallaxCache />
             <Teachers />
           </Parallax>
         </TabContent>
 
         <TabContent value="media">
-          <Parallax y={[0, 20]}>
+          <Parallax y={[0, 15]}>
             <ParallaxCache />
             <Media />
           </Parallax>
