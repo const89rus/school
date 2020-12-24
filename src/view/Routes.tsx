@@ -5,7 +5,7 @@ import { AuthContext } from 'data/auth/AuthContext';
 
 import { Layout } from 'view/components/layout/Layout';
 
-import { MainPage, AccountPage, RegisterPage, ResetPasswordPage, LoginPage, EditPage } from './pages';
+import { MainPage, AccountPage, RegisterPage, ResetPasswordPage, LoginPage, EditPage, AdminPage } from './pages';
 
 export const Routes: React.FC = () => {
   const { currentUser } = useContext(AuthContext);
@@ -15,6 +15,7 @@ export const Routes: React.FC = () => {
         <Layout isAuthed>
           <Route path="/" render={AccountPage} exact />
           <Route path="/edit" render={EditPage} exact />
+          <Route path="/admin" render={AdminPage} exact />
         </Layout>
       ) : (
         <Layout>

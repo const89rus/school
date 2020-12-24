@@ -12,4 +12,5 @@ export { Spinner } from './Spinner/Spinner';
 export { Overlay } from './Overlay/Overlay';
 export { ParallaxCache } from './ParallaxCache/ParallaxCache';
 export { Verify } from './Verify/Verify';
+export { EditEvent } from './EditEvent/EditEvent';
 export * from './Tab';
