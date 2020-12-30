@@ -9,17 +9,17 @@ interface Props {
   date: string;
   time: string;
   heading: string;
-  description: string;
+  description?: string;
 }
 
 export const EditEvent: React.FC<Props> = ({ date, time, heading, description }) => {
   return (
     <S.EventWrapper>
-      <S.Date defaultValue={date}></S.Date>
-      <S.Time defaultValue={time}></S.Time>
+      <S.Date placeholder="Дата" defaultValue={date}></S.Date>
+      <S.Time placeholder="Время" defaultValue={time}></S.Time>
       <S.Event>
-        <S.Heading defaultValue={heading}></S.Heading>
-        <S.Description defaultValue={description}></S.Description>
+        <S.Heading placeholder="Название" defaultValue={heading}></S.Heading>
+        <S.Description placeholder="Описание (если потребуется)" defaultValue={description}></S.Description>
       </S.Event>
       <Check />
       <Garbage />

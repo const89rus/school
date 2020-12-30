@@ -21,7 +21,7 @@ export const MassMedia: React.FC = () => {
           <ParallaxCache />
           <S.Line>
             <S.VideoWrapper>
-              <Video src="FU5RKh0PFP4" headline="Это только начало!" />
+              <Video src="https://www.youtube.com/embed/FU5RKh0PFP4" headline="Это только начало!" />
             </S.VideoWrapper>
             <Post
               headline="Школьников Ноябрьска научат основам журналистики"
@@ -52,7 +52,7 @@ export const MassMedia: React.FC = () => {
               мас­су но­вых зна­ний.
             </Post>
             <S.VideoWrapper>
-              <Video src="FU5RKh0PFP4" headline="Это только начало!" />
+              <Video src="https://www.youtube.com/embed/FU5RKh0PFP4" headline="Это только начало!" />
             </S.VideoWrapper>
           </S.Line>
         </Parallax>

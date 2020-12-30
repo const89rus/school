@@ -61,6 +61,13 @@ const events = [
     heading: '"Основы интервью на иностранном языке"',
     description: 'Спикер Олеся Григорьева',
   },
+  {
+    id: '0',
+    date: '',
+    time: '',
+    heading: '',
+    description: '',
+  },
 ];
 
 export const Announcement: React.FC = () => {

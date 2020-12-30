@@ -28,6 +28,7 @@ export const Fragment = styled.div`
   background-color: ${(props) => props.theme.colors.yellow};
   height: 15.5rem;
   padding: 0.5rem;
+  position: relative;
 `;
 
 export const Link = styled.a`

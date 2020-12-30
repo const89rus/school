@@ -9,15 +9,13 @@ interface Props {
 }
 
 export const Video: React.FC<Props> = ({ src, headline }) => {
-  const link = 'https://www.youtube.com/embed/';
-
   return (
     <S.Wrapper>
       <S.Iframe>
         <iframe
           width="100%"
           height="100%"
-          src={link + src}
+          src={src}
           frameBorder="0"
           allow="autoplay; encrypted-media"
           allowFullScreen
