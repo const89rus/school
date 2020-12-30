@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MMWrapper = styled.div`
   display: grid;
-  grid-template-columns: 18% 18% 18% 18% 18% 5% 5%;
+  grid-template-columns: 18% 18% 18% 18% 18% 3.5% 3.5%;
   align-items: start;
   justify-content: center;
   font-size: 2rem;

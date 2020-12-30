@@ -2,6 +2,9 @@ import React from 'react';
 
 import { EditMassMedia } from 'view/common';
 
+import { ReactComponent as Garbage } from 'assets/svg/garbage.svg';
+import { ReactComponent as Check } from 'assets/svg/check.svg';
+
 import * as S from './styled';
 
 const media = [
@@ -35,7 +38,10 @@ export const Media: React.FC = () => {
           headingArticle={item.headingArticle}
           fragment={item.fragment}
           linkArticle={item.linkArticle}
-        />
+        >
+          <Check />
+          <Garbage />
+        </EditMassMedia>
       ))}
     </S.Wrapper>
   );
