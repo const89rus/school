@@ -13,16 +13,16 @@ const media = [
     headingVideo: '213',
     linkVideo: '123',
     headingArticle: '2143',
-    fragment: 'dfg',
     linkArticle: 'fdgdfg',
+    fragment: 'dfg',
   },
   {
     id: '2',
     headingVideo: '',
     linkVideo: '',
     headingArticle: '',
-    fragment: '',
     linkArticle: '',
+    fragment: '',
   },
 ];
 
@@ -36,8 +36,8 @@ export const Media: React.FC = () => {
           headingVideo={item.headingVideo}
           linkVideo={item.linkVideo}
           headingArticle={item.headingArticle}
-          fragment={item.fragment}
           linkArticle={item.linkArticle}
+          fragment={item.fragment}
         >
           <Check />
           <Garbage />

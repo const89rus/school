@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Review, Announcement, Media } from './components';
+import { Review, Announcement, Media, Teachers, Team, Press } from './components';
 import { Tab, TabContent } from 'view/common';
 
 import * as S from './styled';
@@ -23,6 +23,18 @@ export const Tabs: React.FC = () => {
           <S.TabHeader value="announsment" active={activeTab === 'announsment'}>
             <S.Text>анонсы</S.Text>
           </S.TabHeader>
+
+          <S.TabHeader value="team" active={activeTab === 'team'}>
+            <S.Text>Команда</S.Text>
+          </S.TabHeader>
+
+          <S.TabHeader value="teachers" active={activeTab === 'teachers'}>
+            <S.Text>Преподаватели</S.Text>
+          </S.TabHeader>
+
+          <S.TabHeader value="press" active={activeTab === 'press'}>
+            <S.Text>Пресс-центр</S.Text>
+          </S.TabHeader>
         </S.TabHeadersWrapper>
 
         <TabContent value="review">
@@ -35,6 +47,18 @@ export const Tabs: React.FC = () => {
 
         <TabContent value="announsment">
           <Announcement />
+        </TabContent>
+
+        <TabContent value="team">
+          <Team />
+        </TabContent>
+
+        <TabContent value="teachers">
+          <Teachers />
+        </TabContent>
+
+        <TabContent value="press">
+          <Press />
         </TabContent>
       </Tab>
     </S.Wrapper>
