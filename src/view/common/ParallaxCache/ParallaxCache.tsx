@@ -5,7 +5,7 @@ export const ParallaxCache: React.FC = () => {
   const { parallaxController } = useController();
 
   useLayoutEffect(() => {
-    const handler = () => parallaxController.update();
+    const handler = (): void => parallaxController.update();
     window.addEventListener('load', handler);
     return () => window.removeEventListener('load', handler);
   }, [parallaxController]);

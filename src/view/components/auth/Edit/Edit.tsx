@@ -14,7 +14,7 @@ import * as S from './styled';
 export const Edit: React.FC<IEditComponent> = ({ userUpdate, errorsMessage, profile }) => {
   const { push } = useHistory();
 
-  const { register, formState, handleSubmit, errors, setValue } = useForm<FormFields>({
+  const { register, formState, handleSubmit, errors } = useForm<FormFields>({
     mode: 'onBlur',
     defaultValues: {
       name: profile.name,

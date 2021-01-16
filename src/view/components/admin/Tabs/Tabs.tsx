@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { AnnoucementsContainer } from 'domain/admin/containers/AnnoucementsContainer';
+
 import { Review, Announcement, Media, Teachers, Team, Press } from './components';
 import { Tab, TabContent } from 'view/common';
 
@@ -46,7 +48,7 @@ export const Tabs: React.FC = () => {
         </TabContent>
 
         <TabContent value="announsment">
-          <Announcement />
+          <AnnoucementsContainer component={Announcement} />
         </TabContent>
 
         <TabContent value="team">
