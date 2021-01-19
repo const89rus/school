@@ -7,11 +7,11 @@ interface Props {
   component: React.ElementType<any>;
 }
 
-export const AnnoucementsContainer: React.FC<Props> = ({ component: Component }) => {
+export const MediaContainer: React.FC<Props> = ({ component: Component }) => {
   const [errors, setErrors] = useState<any>();
 
   // api url
-  const url = useMemo(() => 'api/v1/announcements', []);
+  const url = useMemo(() => 'api/v1/media', []);
 
   // метод для получения листа, вызывается один раз при инициализации
   const { data, loading, error } = useApi({
@@ -37,5 +37,5 @@ export const AnnoucementsContainer: React.FC<Props> = ({ component: Component })
     [axios, setErrors]
   );
 
-  return <Component loading={loading} list={data} url={url} errrors={errors} onUpdate={onUpdate} />;
+  return <Component loading={loading} list={data} errrors={errors} onUpdate={onUpdate} />;
 };

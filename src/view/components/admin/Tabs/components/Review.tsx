@@ -77,7 +77,7 @@ const reviews = [
     link: '/',
   },
   {
-    id: '1',
+    id: '11',
     content: <Doc />,
     lesson: 'Lesson 1',
     student: 'Igor Andreev',

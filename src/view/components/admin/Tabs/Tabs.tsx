@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 
-import { AnnoucementsContainer } from 'domain/admin/containers/AnnoucementsContainer';
+import {
+  AnnoucementsContainer,
+  MediaContainer,
+  PressContainer,
+  ReviewsContainer,
+  TeachersContainer,
+  TeamContainer,
+} from 'domain/admin/containers';
 
 import { Review, Announcement, Media, Teachers, Team, Press } from './components';
 import { Tab, TabContent } from 'view/common';
@@ -40,11 +47,11 @@ export const Tabs: React.FC = () => {
         </S.TabHeadersWrapper>
 
         <TabContent value="review">
-          <Review />
+          <ReviewsContainer component={Review} />
         </TabContent>
 
         <TabContent value="massmedia">
-          <Media />
+          <MediaContainer component={Media} />
         </TabContent>
 
         <TabContent value="announsment">
@@ -52,15 +59,15 @@ export const Tabs: React.FC = () => {
         </TabContent>
 
         <TabContent value="team">
-          <Team />
+          <TeamContainer component={Team} />
         </TabContent>
 
         <TabContent value="teachers">
-          <Teachers />
+          <TeachersContainer component={Teachers} />
         </TabContent>
 
         <TabContent value="press">
-          <Press />
+          <PressContainer component={Press} />
         </TabContent>
       </Tab>
     </S.Wrapper>

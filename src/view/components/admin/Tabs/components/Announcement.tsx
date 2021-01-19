@@ -62,19 +62,24 @@ const events = [
     description: 'Спикер Олеся Григорьева',
   },
   {
-    id: '0',
-    date: '',
-    time: '',
-    heading: '',
-    description: '',
+    id: '9',
+    date: 'url.date',
+    time: 'url.time',
+    heading: 'url.heading',
+    description: 'url.description',
   },
 ];
 
-export const Announcement: React.FC = () => {
+/* 
+  API URL api/v1/announcements
+
+*/
+
+export const Announcement: React.FC = ({ url }) => {
   return (
     <S.Wrapper>
       <S.Add>Добавить</S.Add>
-      {events.map((item) => (
+      {url.map((item) => (
         <S.AnnounceWrapper key={item.id}>
           <EditEvent date={item.date} time={item.time} heading={item.heading} description={item.description} />
         </S.AnnounceWrapper>
