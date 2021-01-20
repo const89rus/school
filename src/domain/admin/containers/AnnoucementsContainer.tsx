@@ -3,8 +3,10 @@ import axios from 'axios';
 
 import { useApi } from 'domain/app/hooks/useApi';
 
+import { IAnnouncementComponent } from '../interfaces';
+
 interface Props {
-  component: React.ElementType<any>;
+  component: React.ElementType<IAnnouncementComponent>;
 }
 
 export const AnnoucementsContainer: React.FC<Props> = ({ component: Component }) => {
