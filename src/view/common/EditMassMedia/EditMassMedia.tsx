@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { IMediaComponent, MediaFields } from 'domain/admin/interfaces';
+
 import * as S from './styled';
 
 interface Props {

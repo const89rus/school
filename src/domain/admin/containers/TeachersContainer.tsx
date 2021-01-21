@@ -3,8 +3,10 @@ import axios from 'axios';
 
 import { useApi } from 'domain/app/hooks/useApi';
 
+import { ICardsComponent } from '../interfaces';
+
 interface Props {
-  component: React.ElementType<any>;
+  component: React.ElementType<ICardsComponent>;
 }
 
 export const TeachersContainer: React.FC<Props> = ({ component: Component }) => {

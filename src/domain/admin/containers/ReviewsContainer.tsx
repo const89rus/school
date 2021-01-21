@@ -3,8 +3,10 @@ import axios from 'axios';
 
 import { useApi } from 'domain/app/hooks/useApi';
 
+import { IReviewsComponent } from '../interfaces';
+
 interface Props {
-  component: React.ElementType<any>;
+  component: React.ElementType<IReviewsComponent>;
 }
 
 export const ReviewsContainer: React.FC<Props> = ({ component: Component }) => {

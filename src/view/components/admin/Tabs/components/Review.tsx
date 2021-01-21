@@ -1,11 +1,14 @@
 import React from 'react';
 
+import { IReviewsComponent, ReviewsFields } from 'domain/admin/interfaces';
+
 import { ReactComponent as Doc } from 'assets/svg/Doc.svg';
 import { ReactComponent as Pdf } from 'assets/svg/Pdf.svg';
 
 import * as S from './styled';
 import { Link } from 'react-router-dom';
-const reviews = [
+
+/*const reviews = [
   {
     id: '1',
     content: <Doc />,
@@ -104,13 +107,13 @@ const reviews = [
     student: 'Igor Andreev',
     link: '/',
   },
-];
+];*/
 
-export const Review: React.FC = () => {
+export const Review: React.FC<IReviewsComponent> = ({ list }) => {
   return (
     <S.Wrapper id="review">
       <S.Review>
-        {reviews.map((item) => (
+        {list.map((item) => (
           <S.ReviewItem key={item.id}>
             <Link to={item.link}>{item.content}</Link>
             <S.Lesson>{item.lesson}</S.Lesson>

@@ -3,8 +3,10 @@ import axios from 'axios';
 
 import { useApi } from 'domain/app/hooks/useApi';
 
+import { IMediaComponent } from '../interfaces';
+
 interface Props {
-  component: React.ElementType<any>;
+  component: React.ElementType<IMediaComponent>;
 }
 
 export const MediaContainer: React.FC<Props> = ({ component: Component }) => {

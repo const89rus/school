@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
 
-import { EditEvent } from 'view/common';
+import { ReactComponent as Garbage } from 'assets/svg/garbage.svg';
+import { ReactComponent as Check } from 'assets/svg/check.svg';
+
+import { IAnnouncementComponent, AnnouncementFields } from 'domain/admin/interfaces';
+
+//import { EditEvent } from 'view/common';
 
 import * as S from './styled';
 
-const events = [
+/* const events = [
   {
     id: '1',
     date: '21.11, Суббота',
@@ -68,22 +74,40 @@ const events = [
     heading: 'url.heading',
     description: 'url.description',
   },
-];
+]; */
 
 /* 
   API URL api/v1/announcements
 
 */
 
-export const Announcement: React.FC = ({ url }) => {
+export const Announcement: React.FC<IAnnouncementComponent> = ({ onUpdate, list }) => {
+  const { handleSubmit, errors } = useForm<AnnouncementFields>({
+    mode: 'onBlur',
+    defaultValues: {
+      date: list.date,
+      time: list.time,
+      heading: list.heading,
+      description: list.description,
+    },
+  });
+
+  const event = useEffect(() => {
+    <S.EventWrapper>
+      <S.Date placeholder="Дата" name="date" />
+      <S.Time placeholder="Время" name="time" />
+      <S.Event>
+        <S.Heading placeholder="Название" name="heading" />
+        <S.Description placeholder="Описание (если потребуется)" name="description" />
+      </S.Event>
+      <Check />
+      <Garbage onClick={handleSubmit(onUpdate)} />
+    </S.EventWrapper>;
+  });
   return (
     <S.Wrapper>
       <S.Add>Добавить</S.Add>
-      {url.map((item) => (
-        <S.AnnounceWrapper key={item.id}>
-          <EditEvent date={item.date} time={item.time} heading={item.heading} description={item.description} />
-        </S.AnnounceWrapper>
-      ))}
+      <S.AnnounceWrapper> {event} </S.AnnounceWrapper>
     </S.Wrapper>
   );
 };

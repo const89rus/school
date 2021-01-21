@@ -39,5 +39,5 @@ export const AnnoucementsContainer: React.FC<Props> = ({ component: Component })
     [axios, setErrors]
   );
 
-  return <Component loading={loading} list={data} url={url} errrors={errors} onUpdate={onUpdate} />;
+  return <Component loading={loading} list={data} errrors={errors} onUpdate={onUpdate} />;
 };

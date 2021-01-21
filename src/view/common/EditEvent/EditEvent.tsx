@@ -1,4 +1,5 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
 
 import { ReactComponent as Garbage } from 'assets/svg/garbage.svg';
 import { ReactComponent as Check } from 'assets/svg/check.svg';
@@ -6,16 +7,15 @@ import { ReactComponent as Check } from 'assets/svg/check.svg';
 import { IAnnouncementComponent, AnnouncementFields } from 'domain/admin/interfaces';
 
 import * as S from './styled';
-import { useForm } from 'react-hook-form';
 
-export const EditEvent: React.FC<IAnnouncementComponent> = ({ onUpdate, url }) => {
+export const EditEvent: React.FC<IAnnouncementComponent> = ({ onUpdate, list }) => {
   const { handleSubmit, errors } = useForm<AnnouncementFields>({
     mode: 'onBlur',
     defaultValues: {
-      date: url.date,
-      time: url.time,
-      heading: url.heading,
-      description: url.description,
+      date: list.date,
+      time: list.time,
+      heading: list.heading,
+      description: list.description,
     },
   });
   return (

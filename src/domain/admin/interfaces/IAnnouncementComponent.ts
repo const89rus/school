@@ -1,6 +1,6 @@
 export interface IAnnouncementComponent {
   errors?: string;
-  url?: any;
+  list?: AnnouncementFields;
   onUpdate: (fields: AnnouncementFields) => Promise<void>;
 }
 
