@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+/*import { useForm } from 'react-hook-form';
 
 import { ReactComponent as Garbage } from 'assets/svg/garbage.svg';
 import { ReactComponent as Check } from 'assets/svg/check.svg';
@@ -31,3 +31,4 @@ export const EditEvent: React.FC<IAnnouncementComponent> = ({ onUpdate, list }) 
     </S.EventWrapper>
   );
 };
+*/

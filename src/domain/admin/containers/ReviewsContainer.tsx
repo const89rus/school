@@ -28,16 +28,5 @@ export const ReviewsContainer: React.FC<Props> = ({ component: Component }) => {
     if (error) setErrors(error.message);
   }, [error]);
 
-  const onUpdate = useCallback(
-    (fields: any) => {
-      console.log('onUpdate', fields);
-      //   axios
-      //     .post(url, fields)
-      //     .then((data) => data)
-      //     .catch((error) => setErrors(error));
-    },
-    [axios, setErrors]
-  );
-
-  return <Component loading={loading} list={data} errrors={errors} onUpdate={onUpdate} />;
+  return <Component loading={loading} list={data} errors={errors} />;
 };

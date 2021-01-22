@@ -1,6 +1,8 @@
 export interface IReviewsComponent {
+  //data: any;
+  loading: boolean;
   errors?: string;
-  list?: ReviewsFields[];
+  list?: unknown;
 }
 
 export interface ReviewsFields {

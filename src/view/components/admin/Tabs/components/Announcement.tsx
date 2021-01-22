@@ -82,7 +82,7 @@ import * as S from './styled';
 */
 
 export const Announcement: React.FC<IAnnouncementComponent> = ({ onUpdate, list }) => {
-  const { handleSubmit, errors } = useForm<AnnouncementFields>({
+  const { handleSubmit } = useForm<AnnouncementFields>({
     mode: 'onBlur',
     defaultValues: {
       date: list.date,

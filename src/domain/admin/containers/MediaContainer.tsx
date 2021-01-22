@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import { useApi } from 'domain/app/hooks/useApi';
 
-import { IMediaComponent } from '../interfaces';
+import { IMediaComponent, MediaFields } from '../interfaces';
 
 interface Props {
   component: React.ElementType<IMediaComponent>;
@@ -29,7 +29,7 @@ export const MediaContainer: React.FC<Props> = ({ component: Component }) => {
   }, [error]);
 
   const onUpdate = useCallback(
-    (fields: any) => {
+    (fields: MediaFields) => {
       console.log('onUpdate', fields);
       //   axios
       //     .post(url, fields)
@@ -39,5 +39,5 @@ export const MediaContainer: React.FC<Props> = ({ component: Component }) => {
     [axios, setErrors]
   );
 
-  return <Component loading={loading} list={data} errrors={errors} onUpdate={onUpdate} />;
+  return <Component loading={loading} list={data} errors={errors} onUpdate={onUpdate} />;
 };

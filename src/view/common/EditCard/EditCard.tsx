@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as S from './styled';
+/*import * as S from './styled';
 
 interface Props {
   name: string;
@@ -16,4 +16,4 @@ export const EditCard: React.FC<Props> = ({ name, img, position }) => {
       <S.Input type="text" placeholder="Описание" defaultValue={position}></S.Input>
     </S.EditCardWrapper>
   );
-};
+};*/

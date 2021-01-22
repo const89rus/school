@@ -1,7 +1,9 @@
 export interface IMediaComponent {
+  //data: any;
+  loading: boolean;
   errors?: string;
-  list?: any;
-  onUpdate: (fields: MediaFields) => Promise<void>;
+  list?: unknown;
+  onUpdate: (fields: MediaFields) => void;
 }
 
 export interface MediaFields {

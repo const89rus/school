@@ -1,7 +1,9 @@
 export interface ICardsComponent {
+  //data: any;
+  loading: boolean;
   errors?: string;
-  list?: any;
-  onUpdate: (fields: CardsFields) => Promise<void>;
+  list?: unknown;
+  onUpdate: (fields: CardsFields) => void;
 }
 
 export interface CardsFields {

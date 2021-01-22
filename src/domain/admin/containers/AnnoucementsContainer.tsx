@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import { useApi } from 'domain/app/hooks/useApi';
 
-import { IAnnouncementComponent } from '../interfaces';
+import { IAnnouncementComponent, AnnouncementFields } from '../interfaces';
 
 interface Props {
   component: React.ElementType<IAnnouncementComponent>;
@@ -29,15 +29,15 @@ export const AnnoucementsContainer: React.FC<Props> = ({ component: Component })
   }, [error]);
 
   const onUpdate = useCallback(
-    (fields: any) => {
+    (fields: AnnouncementFields) => {
       console.log('onUpdate', fields);
-      //   axios
-      //     .post(url, fields)
-      //     .then((data) => data)
-      //     .catch((error) => setErrors(error));
+      axios
+        .post(url, fields)
+        .then((data) => data)
+        .catch((error) => setErrors(error));
     },
-    [axios, setErrors]
+    [url]
   );
 
-  return <Component loading={loading} list={data} errrors={errors} onUpdate={onUpdate} />;
+  return <Component loading={loading} list={data} errors={errors} onUpdate={onUpdate} />;
 };

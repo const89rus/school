@@ -8,7 +8,7 @@ import { ReactComponent as Pdf } from 'assets/svg/Pdf.svg';
 import * as S from './styled';
 import { Link } from 'react-router-dom';
 
-/*const reviews = [
+const reviews = [
   {
     id: '1',
     content: <Doc />,
@@ -107,13 +107,13 @@ import { Link } from 'react-router-dom';
     student: 'Igor Andreev',
     link: '/',
   },
-];*/
+];
 
-export const Review: React.FC<IReviewsComponent> = ({ list }) => {
+export const Review: React.FC<IReviewsComponent> = () => {
   return (
     <S.Wrapper id="review">
       <S.Review>
-        {list.map((item) => (
+        {reviews.map((item) => (
           <S.ReviewItem key={item.id}>
             <Link to={item.link}>{item.content}</Link>
             <S.Lesson>{item.lesson}</S.Lesson>

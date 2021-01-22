@@ -1,5 +1,5 @@
 import React from 'react';
-
+/*
 import { IMediaComponent, MediaFields } from 'domain/admin/interfaces';
 
 import * as S from './styled';
@@ -30,4 +30,4 @@ export const EditMassMedia: React.FC<Props> = ({
       {children}
     </S.MMWrapper>
   );
-};
+};*/

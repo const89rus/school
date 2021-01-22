@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import { useApi } from 'domain/app/hooks/useApi';
 
-import { ICardsComponent } from '../interfaces';
+import { ICardsComponent, CardsFields } from '../interfaces';
 
 interface Props {
   component: React.ElementType<ICardsComponent>;
@@ -29,7 +29,7 @@ export const TeamContainer: React.FC<Props> = ({ component: Component }) => {
   }, [error]);
 
   const onUpdate = useCallback(
-    (fields: any) => {
+    (fields: CardsFields) => {
       console.log('onUpdate', fields);
       //   axios
       //     .post(url, fields)
@@ -39,5 +39,5 @@ export const TeamContainer: React.FC<Props> = ({ component: Component }) => {
     [axios, setErrors]
   );
 
-  return <Component loading={loading} list={data} errrors={errors} onUpdate={onUpdate} />;
+  return <Component loading={loading} list={data} errors={errors} onUpdate={onUpdate} />;
 };

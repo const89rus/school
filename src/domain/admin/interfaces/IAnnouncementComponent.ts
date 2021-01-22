@@ -1,7 +1,9 @@
 export interface IAnnouncementComponent {
+  //data: any;
+  loading: boolean;
   errors?: string;
-  list?: AnnouncementFields;
-  onUpdate: (fields: AnnouncementFields) => Promise<void>;
+  list?: unknown;
+  onUpdate: (fields: AnnouncementFields) => void;
 }
 
 export interface AnnouncementFields {
