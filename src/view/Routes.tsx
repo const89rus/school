@@ -15,7 +15,7 @@ export const Routes: React.FC = () => {
         <Layout isAuthed>
           <Route path="/" render={AccountPage} exact />
           <Route path="/edit" render={EditPage} exact />
-          {/* <Route path="/admin" render={AdminPage} exact /> */}
+          <Route path="/admin" render={AdminPage} exact />
         </Layout>
       ) : (
         <Layout>

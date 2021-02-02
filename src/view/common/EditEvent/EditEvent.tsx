@@ -4,11 +4,11 @@ import React from 'react';
 import { ReactComponent as Garbage } from 'assets/svg/garbage.svg';
 import { ReactComponent as Check } from 'assets/svg/check.svg';
 
-import { IAnnouncementComponent, AnnouncementFields } from 'domain/admin/interfaces';
+import { AnnouncementComponent, AnnouncementFields } from 'domain/admin/interfaces';
 
 import * as S from './styled';
 
-export const EditEvent: React.FC<IAnnouncementComponent> = ({ onUpdate, list }) => {
+export const EditEvent: React.FC<AnnouncementComponent> = ({ onUpdate, list }) => {
   const { handleSubmit, errors } = useForm<AnnouncementFields>({
     mode: 'onBlur',
     defaultValues: {

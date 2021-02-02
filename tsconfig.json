@@ -29,5 +29,6 @@
     "domain/*": ["src/domain/*"],
     "assets/*": ["src/asstes/*"],
     "data/*": ["src/data/*"],
+    "infra/*": ["src/infra/*"],
   },
 }

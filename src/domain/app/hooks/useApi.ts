@@ -62,7 +62,7 @@ export const useApi = <TDataResponse, TErrorResponse = any>(
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [url, config, isAutoFetch, skip]);
+  }, [url, isAutoFetch, skip]);
 
   useEffect(() => {
     return () => {

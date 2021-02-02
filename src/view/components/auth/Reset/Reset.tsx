@@ -13,7 +13,7 @@ import * as S from './styled';
 export const Reset: React.FC<IResetComponent> = ({ onReset }) => {
   const { push } = useHistory();
 
-  const { register, formState, handleSubmit, errors, setValue } = useForm<FormFields>({
+  const { register, formState, handleSubmit, errors } = useForm<FormFields>({
     mode: 'onBlur',
     defaultValues: {
       email: '',
