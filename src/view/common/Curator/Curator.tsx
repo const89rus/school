@@ -3,7 +3,6 @@ import React from 'react';
 import { fb } from 'data/firebase/firebase';
 
 import { ReactComponent as Vk } from 'assets/svg/vk.svg';
-import { ReactComponent as Insta } from 'assets/svg/insta.svg';
 
 import * as S from './styled';
 
@@ -14,12 +13,11 @@ interface Props {
   city: string;
   mail: string;
   uneversity: string;
-  insta: string;
   vk: string;
   alt?: string;
 }
 
-export const Curator: React.FC<Props> = ({ name, img, alt = 'avatar', age, city, mail, uneversity, insta, vk }) => {
+export const Curator: React.FC<Props> = ({ name, img, alt = 'avatar', age, city, mail, uneversity, vk }) => {
   return (
     <S.CuratorWrapper>
       <S.CuratorAvatar>
@@ -34,11 +32,6 @@ export const Curator: React.FC<Props> = ({ name, img, alt = 'avatar', age, city,
           <span>{mail}</span>
           <span>{uneversity}</span>
           <S.Social>
-            <S.Link href={insta}>
-              <S.SocialContainer>
-                <Insta />
-              </S.SocialContainer>
-            </S.Link>
             <S.Link href={vk}>
               <S.SocialContainer>
                 <Vk />

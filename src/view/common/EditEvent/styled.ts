@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const EventWrapper = styled.div`
+export const EventWrapper = styled.form`
   display: grid;
   grid-template-columns: 20% 20% 55% 2.5% 2.5%;
   align-items: start;
@@ -101,4 +101,14 @@ export const Description = styled.input`
   @media (max-width: 425px) {
     font-size: 1rem;
   }
+`;
+
+export const IconButton = styled.div`
+  width: 100%;
+  max-width: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 `;

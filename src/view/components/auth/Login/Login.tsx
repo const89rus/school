@@ -40,6 +40,8 @@ export const Login: React.FC<ILoginComponent> = ({ onLogin, errorsMessage }) => 
       <Link to="/register">
         <S.Button appearance="primary">Зарегистрироваться</S.Button>
       </Link>
+
+      <S.Link href="https://oauth.vk.com/authorize?client_id=7823816&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.130">или авторизуйтесь через VK</S.Link>
     </S.Wrapper>
   );
 };

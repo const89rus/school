@@ -12,7 +12,7 @@ export { Spinner } from './Spinner/Spinner';
 export { Overlay } from './Overlay/Overlay';
 export { ParallaxCache } from './ParallaxCache/ParallaxCache';
 export { Verify } from './Verify/Verify';
-//export { EditEvent } from './EditEvent/EditEvent';
+export { EditEvent } from './EditEvent/EditEvent';
 //export { EditMassMedia } from './EditMassMedia/EditMassMedia';
 //export { EditCard } from './EditCard/EditCard';
 export * from './Tab';

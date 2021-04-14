@@ -10,6 +10,7 @@ interface Props {
 }
 
 export const LoginContainer: React.FC<Props> = ({ component: Component }) => {
+
   const history = useHistory();
   const [errors, setErrors] = useState<string>();
 

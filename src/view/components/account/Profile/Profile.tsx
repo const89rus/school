@@ -17,7 +17,6 @@ export const Profile: React.FC<any> = ({ profile }) => {
       mail={profile.email}
       uneversity={profile.study}
       vk={profile.social}
-      insta={profile.social}
     />
   );
 };

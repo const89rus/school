@@ -5,6 +5,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   margin: 0 5rem;
   background-color: ${(props) => props.theme.colors.primary};
+  padding: 1rem;
   height: auto;
   max-height: 50vh;
   width: 75vw;
