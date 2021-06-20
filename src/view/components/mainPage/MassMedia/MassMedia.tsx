@@ -35,9 +35,6 @@ export const MassMedia: React.FC = () => {
               журналистов из разных городов.
             </Post>
           </S.Line>
-        </Parallax>
-        <Parallax y={[10, 0]}>
-          <ParallaxCache />
           <S.Line>
             <Post
               headline="Представители ГОШ «САМ» приняли участие в Форуме добровольцев"

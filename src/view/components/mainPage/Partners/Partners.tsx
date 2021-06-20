@@ -5,6 +5,7 @@ import { Section } from 'view/common';
 
 import partner1 from 'assets/img/Logotip_zalivka_belaya 1.png';
 import partner2 from 'assets/img/arktik_media.png';
+import partner3 from 'assets/img/logo_AM.png';
 
 import { colors } from 'assets/variables/colors';
 
@@ -20,6 +21,7 @@ export const Partners: React.FC = () => {
       <S.Wrapper>
         <S.Img src={partner1} alt="logo" />
         <S.Img src={partner2} alt="logo" />
+        <S.Img src={partner3} alt="logo" />
       </S.Wrapper>
     </Section>
   );
